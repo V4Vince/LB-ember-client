@@ -1,2 +1,14 @@
-@import 'bootstrap';
-@import 'bootstrap/theme';
+// Fix for Roboto font path
+$roboto-font-path: '../assets/';
+
+@import 'components/color';
+
+// Custom color settings go here
+$primary-color: color("red", "lighten-2");
+
+@import 'components/variables';
+
+// Materialize styles
+@import "materialize";
+
+@import 'ember-cli-materialize';
