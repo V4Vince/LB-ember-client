@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+{{!-- <nav class="navbar navbar-default">
   <div class="container-fluid">
     {{navbar-header}}
 
@@ -19,7 +19,35 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> --}}
+
+{{#md-navbar name='Lynn'}}
+  <!-- A workaround to get the "active" class
+    to apply to the active <li> automatically -->
+  {{#if isAuthenticated}}
+  {{#md-btn-dropdown
+    text="Settings"
+    icon="material-icons"
+    
+    }}
+    {{#link-to 'users' tagName='li'}}
+      {{link-to 'User' 'users'}}
+    {{/link-to}}
+    {{#link-to 'change-password' tagName='li'}}
+      {{link-to 'Change Password' 'change-password'}}
+    {{/link-to}}
+    <li class="divider"></li>
+    <li><a href="#" {{action "signOut"}} class="sign-out-button">Sign Out</a></li>
+  {{/md-btn-dropdown}}
+  {{else}}
+    {{#link-to 'sign-up' tagName='li'}}
+      {{link-to 'Sign Up' 'sign-up'}}
+    {{/link-to}}
+    {{#link-to 'sign-in' tagName='li'}}
+      {{link-to 'Sign In' 'sign-in'}}
+    {{/link-to}}
+  {{/if}}
+{{/md-navbar}}
 
 <h1>Welcome to Ember!</h1>
 

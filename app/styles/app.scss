@@ -12,3 +12,5 @@ $primary-color: color("red", "lighten-2");
 @import "materialize";
 
 @import 'ember-cli-materialize';
+@import "colors";
+@import "dimensions";
