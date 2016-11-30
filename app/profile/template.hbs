@@ -1,0 +1,10 @@
+<h2>My Profile</h2>
+
+{{#each model as |profile|}}
+<ul>
+  <li>{{profile.firstName}}</li>
+  <li>{{profile.lastName}}</li>
+  <li>{{profile.birthday}}</li>
+  <li>{{profile.aboutMe}}</li>
+</ul>
+{{/each}}

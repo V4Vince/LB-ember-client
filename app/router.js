@@ -10,8 +10,9 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
-  this.route('blogs');
-  this.route('contacts');
+  this.route('blogs', { path: '/my-blog'});
+  this.route('contacts', { path: '/contact-me'});
+  this.route('profile', { path: '/bio'});
 });
 
 export default Router;
