@@ -26,10 +26,21 @@
     to apply to the active <li> automatically -->
   {{#if isAuthenticated}}
   {{#md-btn-dropdown
+    text="Your site"
+    icon="material-icons"}}
+    {{#link-to 'blogs' tagName='li'}}
+      {{link-to 'Blog' 'blogs'}}
+    {{/link-to}}
+    {{#link-to 'contacts' tagName='li'}}
+      {{link-to 'Contact' 'contacts'}}
+    {{/link-to}}
+    {{#link-to 'profile' tagName='li'}}
+      {{link-to 'Bio' 'profile'}}
+    {{/link-to}}
+  {{/md-btn-dropdown}}
+  {{#md-btn-dropdown
     text="Settings"
-    icon="material-icons"
-    
-    }}
+    icon="material-icons"}}
     {{#link-to 'users' tagName='li'}}
       {{link-to 'User' 'users'}}
     {{/link-to}}
@@ -39,9 +50,16 @@
     <li class="divider"></li>
     <li><a href="#" {{action "signOut"}} class="sign-out-button">Sign Out</a></li>
   {{/md-btn-dropdown}}
+
   {{else}}
-    {{#link-to 'sign-up' tagName='li'}}
-      {{link-to 'Sign Up' 'sign-up'}}
+    {{#link-to 'blogs' tagName='li'}}
+      {{link-to 'Blog' 'blogs'}}
+    {{/link-to}}
+    {{#link-to 'contacts' tagName='li'}}
+      {{link-to 'Contact' 'contacts'}}
+    {{/link-to}}
+    {{#link-to 'profile' tagName='li'}}
+      {{link-to 'Bio' 'profile'}}
     {{/link-to}}
     {{#link-to 'sign-in' tagName='li'}}
       {{link-to 'Sign In' 'sign-in'}}
