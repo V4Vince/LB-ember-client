@@ -1,0 +1,7 @@
+<h2>Contact Me</h2>
+<ul>
+{{#each model as |contact|}}
+  <li>Title: {{contact.contactType}}</li>
+  <li>Content: {{contact.contactPath}}</li>
+{{/each}}
+</ul>
