@@ -21,21 +21,23 @@
   </div>
 </nav> --}}
 
-{{#md-navbar name='Lynn'}}
+{{#md-navbar name='Lynnelle'}}
   <!-- A workaround to get the "active" class
     to apply to the active <li> automatically -->
+
+  <!--What Lynn sees in navbar-->
   {{#if isAuthenticated}}
   {{#md-btn-dropdown
     text="Your site"
     icon="material-icons"}}
+    {{#link-to 'profile' tagName='li'}}
+      {{link-to 'Bio' 'profile'}}
+    {{/link-to}}
     {{#link-to 'blogs' tagName='li'}}
       {{link-to 'Blog' 'blogs'}}
     {{/link-to}}
     {{#link-to 'contacts' tagName='li'}}
       {{link-to 'Contact' 'contacts'}}
-    {{/link-to}}
-    {{#link-to 'profile' tagName='li'}}
-      {{link-to 'Bio' 'profile'}}
     {{/link-to}}
   {{/md-btn-dropdown}}
   {{#md-btn-dropdown
@@ -50,16 +52,16 @@
     <li class="divider"></li>
     <li><a href="#" {{action "signOut"}} class="sign-out-button">Sign Out</a></li>
   {{/md-btn-dropdown}}
-
+  <!--What visitors see in navbar-->
   {{else}}
+    {{#link-to 'profile' tagName='li'}}
+      {{link-to 'Bio' 'profile'}}
+    {{/link-to}}
     {{#link-to 'blogs' tagName='li'}}
       {{link-to 'Blog' 'blogs'}}
     {{/link-to}}
     {{#link-to 'contacts' tagName='li'}}
       {{link-to 'Contact' 'contacts'}}
-    {{/link-to}}
-    {{#link-to 'profile' tagName='li'}}
-      {{link-to 'Bio' 'profile'}}
     {{/link-to}}
     {{#link-to 'sign-in' tagName='li'}}
       {{link-to 'Sign In' 'sign-in'}}
