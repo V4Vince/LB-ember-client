@@ -4,13 +4,13 @@ $roboto-font-path: '../assets/';
 @import 'components/color';
 
 // Custom color settings go here
-$primary-color: color("red", "lighten-2");
+$primary-color: color("blue-grey", "darken-1"); //#546e7a
 
 @import 'components/variables';
 
 // Materialize styles
 @import "materialize";
-
 @import 'ember-cli-materialize';
+
 @import "colors";
 @import "dimensions";
