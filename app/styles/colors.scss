@@ -1,0 +1,29 @@
+body {
+  /* #a7ffeb teal accent-1 */
+  background-color: $background-color;
+}
+
+.sign-out-button {
+  background-color: red;
+}
+
+#blog-card {
+  background-color: white;
+}
+/* Bio Page */
+.about-me-card {
+  background-color: $secondary-color;
+}
+
+/* Blog page */
+.blog-card {
+  background-color: $secondary-color;
+}
+.blog-card-action {
+  @extend .brown, .lighten-4;
+}
+
+/* Contact page */
+.contact-panels {
+  background-color: $primary-color-light;
+}

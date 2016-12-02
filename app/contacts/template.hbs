@@ -6,15 +6,15 @@
 </p>
 <ul>
 {{#each model as |contact|}}
-  {{#md-card-panel class="teal row"
+  {{#md-card-panel class="row contact-panels"
     bodyClass="white-text"
-    id="card-panel"}}
-        <div class="col s3">
-          {{contact.contactType}}
-        </div>
-        <div class="col s9">
-          {{contact.contactPath}}
-        </div>
+    id=""}}
+      <div class="col s3">
+        {{contact.contactType}}
+      </div>
+      <div class="col s9">
+        {{contact.contactPath}}
+      </div>
   {{/md-card-panel}}
 {{/each}}
 </ul>

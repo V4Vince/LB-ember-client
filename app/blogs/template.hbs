@@ -1,7 +1,17 @@
-<h2>Blogs</h2>
-<ul>
+<h4 class="flow-text center-align">Blog</h4>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
 {{#each model as |blog|}}
-  <li>Title: {{blog.title}}</li>
-  <li>Content: {{blog.content}}</li>
+{{#md-card title=blog.title class="blog-card"}}
+    {{#md-card-content}}
+        {{blog.content}}
+    {{/md-card-content}}
+    {{#md-card-action
+      class="blog-card-action"}}
+        Like
+        {{!-- {{#link-to "cards"}}Link 1{{/link-to}}
+        {{#link-to "cards"}}Link 2{{/link-to}} --}}
+    {{/md-card-action}}
+{{/md-card}}
 {{/each}}
-</ul>
