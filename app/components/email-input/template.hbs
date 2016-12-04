@@ -1,5 +1,10 @@
-<label for="email">Email</label>
-{{input type="email"
+{{!-- <label for="email">Email</label> --}}
+{{!-- {{input type="email"
         id="email"
         placeholder="Email"
-        value=email}}
+        value=email}} --}}
+{{md-input
+  value=email
+  label='Email'
+  class="col s12"
+  validate=true }}
