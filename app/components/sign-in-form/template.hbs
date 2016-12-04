@@ -1,10 +1,29 @@
-{{email-input email=credentials.email}}
-{{password-input password=credentials.password}}
+{{!-- {{email-input email=credentials.email}}
+{{password-input password=credentials.password}} --}}
 
-<button type="submit" class="btn btn-primary" {{action "submit"}}>
+{{!-- <button type="submit" class="btn btn-primary" {{action "submit"}}>
   Sign In
 </button>
 
 <button class="btn btn-default" {{action "reset"}}>
   Cancel
-</button>
+</button> --}}
+
+{{#md-card title="Log In" id="sign-in-card" class="col s12 m6 offset-m3"}}
+    {{#md-card-content }}
+      {{email-input email=credentials.email}}
+      {{password-input password=credentials.password class="col s12"}}
+      {{md-btn-submit icon='mdi-content-send'
+        iconPosition='right'
+        text='Log In'
+        action='submit'}}
+      {{md-btn icon='mdi-content-send'
+        iconPosition='right'
+        text='Cancel'
+        action='reset'}}
+    {{/md-card-content}}
+
+    {{#md-card-action}}
+    {{/md-card-action}}
+
+{{/md-card}}
