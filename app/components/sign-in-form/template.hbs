@@ -13,19 +13,26 @@
     {{#md-card-content }}
       {{email-input email=credentials.email}}
       {{password-input password=credentials.password}}
+      <div class="row">
       {{md-btn-submit icon='mdi-content-send'
         iconPosition='right'
         text='Log In'
         action='submit'
-        }}
+        class="col s12 m10 offset-m1 center-align"}}
+      </div>
+      <div class="row">
       {{md-btn icon='mdi-content-send'
         iconPosition='right'
         text='Cancel'
         action='reset'
-        }}
+        class="col s12 m10 offset-m1 center-align"}}
+      </div>
     {{/md-card-content}}
 
     {{#md-card-action}}
+      {{#link-to 'sign-up' id="create-account-link"}}
+        {{link-to 'Create account' 'sign-in'}}
+      {{/link-to}}
     {{/md-card-action}}
 
 {{/md-card}}
