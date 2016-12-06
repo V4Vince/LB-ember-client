@@ -9,6 +9,8 @@ export default Ember.Component.extend({
   actions: {
     submit () {
       this.sendAction('submit', this.get('credentials'));
+      console.log("WORKS!");
+      console.log(this.get('credentials'));
     },
 
     reset () {

@@ -1,5 +1,10 @@
-<label for="password-confirmation">Password Confirmation</label>
+{{!-- <label for="password-confirmation">Password Confirmation</label>
 {{input type="password"
         id="password-confirmation"
         placeholder="Password Confirmation"
-        value=password}}
+        value=password}} --}}
+
+{{md-input
+  value=password
+  label='Password Confirmation'
+  class="col s12 m10 offset-m1"}}
