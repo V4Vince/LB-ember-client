@@ -12,15 +12,17 @@
 {{#md-card title="Log In" id="sign-in-card" class="col s12 m6 offset-m3"}}
     {{#md-card-content }}
       {{email-input email=credentials.email}}
-      {{password-input password=credentials.password class="col s12"}}
+      {{password-input password=credentials.password}}
       {{md-btn-submit icon='mdi-content-send'
         iconPosition='right'
         text='Log In'
-        action='submit'}}
+        action='submit'
+        }}
       {{md-btn icon='mdi-content-send'
         iconPosition='right'
         text='Cancel'
-        action='reset'}}
+        action='reset'
+        }}
     {{/md-card-content}}
 
     {{#md-card-action}}
