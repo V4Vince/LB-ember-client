@@ -27,3 +27,14 @@ body {
 .contact-panels {
   background-color: $primary-color-light;
 }
+
+
+.submit-button {
+  background-color: $button-color;
+}
+.cancel-button {
+  background-color: $button-cancel-color;
+  &:hover {
+  background-color: $button-cancel-raised-background-hover;
+  }
+}
