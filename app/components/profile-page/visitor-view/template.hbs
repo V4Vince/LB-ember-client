@@ -1,0 +1,14 @@
+{{#each profile as |profile|}}
+<div class="col m6">
+  {{#md-card-panel
+      class="white flow-text
+             hide-on-small-only"
+      bodyClass="black-text"
+      id="profilePic"}}
+    <h2>Picture</h2>
+  {{/md-card-panel}}
+</div>
+<div class="col s12 m6 flow-text">
+  {{profile.aboutMe}}
+</div>
+{{/each}}

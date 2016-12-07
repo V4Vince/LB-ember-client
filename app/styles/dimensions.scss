@@ -1,3 +1,8 @@
+$margin-bottom: 3rem;
+
 #main-nav-bar {
-  margin-bottom: 3rem;
+  margin-bottom: $margin-bottom;
+}
+.divider {
+  margin-bottom: $margin-bottom;
 }

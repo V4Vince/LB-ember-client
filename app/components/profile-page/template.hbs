@@ -1,0 +1,17 @@
+{{#md-card-panel class="about-me-card"
+    bodyClass=""
+    id="card-panel"}}
+    <div class="flow-text">
+      <h1 class="white-text center-align">About</h1>
+      <div class="divider"></div>
+    </div>
+  {{#if isAuthenticated}}
+    <div class="row">
+      {{profile-page/admin-view profile=profile}}
+    </div>
+  {{else}}
+    <div class="row">
+      {{profile-page/visitor-view profile=profile}}
+    </div>
+  {{/if}}
+{{/md-card-panel}}
