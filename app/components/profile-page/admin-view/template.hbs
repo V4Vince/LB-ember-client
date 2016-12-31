@@ -1,3 +1,66 @@
-<h1>ADMIN VIEW</h1>
-
 <!-- Add the cards for what the admin sees when shes logged in and viewing /profile -->
+
+<!--div row-->
+
+
+{{#each profile as |profile|}}
+<div class="col m6 hide-on-small-only">
+  <div class="row">
+    {{md-btn text="Edit"
+      class="col s6 offset-s3"}}
+  </div>
+  <div class="row">
+    {{#md-card-panel
+        class="white flow-text
+               col s12"
+        bodyClass="black-text"
+        id="profilePic"}}
+      <h2>Picture</h2>
+    {{/md-card-panel}}
+  </div>
+</div>
+
+<div class="col s12 m6">
+  <div class="row">
+    {{md-btn text="Edit"
+      class="col s12 m6 offset-m3"
+      action='editAboutModal'}}
+  </div>
+  <div class="row">
+    <div class="col s12">
+      {{profile.aboutMe}}
+    </div>
+  </div>
+</div>
+
+
+<!-- Move this modal block to its own component-->
+{{#if aboutModalIsOpen}}
+    {{#md-modal close='closeModal' class="test-modal"}}
+        <div class="modal-content">
+          <p class="title">Edit your about me section</p>
+
+          <div class="row">
+            {{md-textarea label='About Me'
+              value=profile.aboutMe
+              class="col s12"}}
+          </div>
+        </div>
+
+        <div class="modal-footer">
+            <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'agree'}}>
+                Done!
+            </a>
+            <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>
+                Cancel
+            </a>
+        </div>
+    {{/md-modal}}
+{{/if}}
+<!-- __________________________________  -->
+
+{{/each}}
+
+
+
+<!--div row-->
