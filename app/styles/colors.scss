@@ -1,3 +1,29 @@
+// $background-color: color("teal", "lighten-3");
+$background-color: color("white", "darken-4");
+
+// Custom color settings go here
+$primary-color: color("blue-grey", "darken-1"); //#546e7a
+$primary-color-light: lighten($primary-color, 15%);
+$primary-color-dark: darken($primary-color, 15%);
+
+//$secondary-color: color("brown", "lighten-5"); //#bcaaa4
+$secondary-color: color("teal", "darken-1");
+
+$button-color: color("cyan", "darken-3");
+$button-raised-background-hover: lighten($button-color, 5%) !default;
+$button-cancel-color: color("grey", "lighten-1") !default;
+$button-cancel-raised-background-hover: lighten($button-cancel-color, 5%) !default;
+
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: color("light-blue", "darken-1") !default;
+
+// Side Nav
+$sidenav-font-color: white !default;
+$sidenav-bg-color: $primary-color-light !default;
+$sidenav-padding-right: 30px !default;
+$sidenav-item-height: 64px !default;
+
 body {
   /* #a7ffeb teal accent-1 */
   background-color: $background-color;
