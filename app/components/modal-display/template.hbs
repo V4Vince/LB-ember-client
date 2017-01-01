@@ -1,0 +1,22 @@
+<!-- Move this modal block to its own component-->
+{{#md-modal close='closeModal' class="test-modal"}}
+    <div class="modal-content">
+      <p class="title" id="edit-about-me-modal">Edit your about me section</p>
+
+      <div class="row">
+        {{md-textarea label='About Me'
+          value=profile.aboutMe
+          class="col s12"}}
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <!--Wire up update/edit function here-->
+        <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'agree'}}>
+            Done!
+        </a>
+        <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>
+            Cancel
+        </a>
+    </div>
+{{/md-modal}}
