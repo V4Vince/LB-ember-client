@@ -1,19 +1,24 @@
-// $background-color: color("teal", "lighten-3");
-$background-color: color("white", "darken-4");
 
-// Custom color settings go here
-$primary-color: color("blue-grey", "darken-1"); //#546e7a
-$primary-color-light: lighten($primary-color, 15%);
-$primary-color-dark: darken($primary-color, 15%);
+// THESE ARE CUSTOM COLORS DEPENDENT ON components/colors
+
+// $background-color:
+$background-color: color("teal", "lighten-5");
+
+// $primary-color:
+$primary-color: color("cyan", "darken-3");
+$primary-color-light: lighten($primary-color, 5%);
+$primary-color-dark: darken($primary-color, 5%);
 
 //$secondary-color: color("brown", "lighten-5"); //#bcaaa4
 $secondary-color: color("teal", "darken-1");
 
-$button-color: color("cyan", "darken-3");
+//$button-color
+$button-color: $primary-color;
 $button-raised-background-hover: lighten($button-color, 5%) !default;
 $button-cancel-color: color("grey", "lighten-1") !default;
-$button-cancel-raised-background-hover: lighten($button-cancel-color, 5%) !default;
+$button-cancel-raised-background-hover: color("red", "darken-3") !default;
 
+//Indication Colors
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
 $link-color: color("light-blue", "darken-1") !default;
@@ -23,48 +28,3 @@ $sidenav-font-color: white !default;
 $sidenav-bg-color: $primary-color-light !default;
 $sidenav-padding-right: 30px !default;
 $sidenav-item-height: 64px !default;
-
-body {
-  /* #a7ffeb teal accent-1 */
-  background-color: $background-color;
-}
-
-.sign-out-button {
-  background-color: red;
-}
-
-#blog-card {
-  background-color: white;
-}
-/* Bio Page */
-.about-me-card {
-  background-color: $secondary-color;
-}
-
-/* Blog page */
-.blog-card {
-  background-color: $secondary-color;
-}
-.blog-card-action {
-  @extend .brown, .lighten-4;
-}
-
-/* Contact page */
-.contact-panels {
-  background-color: $primary-color-light;
-}
-
-
-.submit-button {
-  background-color: $button-color;
-}
-.cancel-button {
-  background-color: $button-cancel-color;
-  &:hover {
-  background-color: $button-cancel-raised-background-hover;
-  }
-}
-
-.divider {
-  background-color: $primary-color-light;
-}

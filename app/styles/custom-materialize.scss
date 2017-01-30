@@ -1,0 +1,62 @@
+.card {
+  border-color: $primary-color;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.btn {
+  background-color: $button-color;
+}
+
+.card-panel {
+  border-color: $primary-color;
+  border-width: 2px;
+  border-style: solid;
+}
+
+
+
+
+
+body {
+  /* #a7ffeb teal accent-1 */
+  background-color: $background-color;
+}
+
+.sign-out-button {
+  background-color: red;
+}
+
+#blog-card {
+  background-color: white;
+}
+/* Bio Page */
+.about-me-card {
+
+}
+
+/* Blog page */
+.blog-card-action {
+
+}
+
+/* Contact page */
+.contact-panels {
+  background-color: $primary-color-light;
+  border-style: none;
+}
+
+
+.submit-button {
+  background-color: $button-color;
+}
+.cancel-button {
+  background-color: $button-cancel-color;
+  &:hover {
+  background-color: $button-cancel-raised-background-hover;
+  }
+}
+
+.divider {
+  background-color: $primary-color-light;
+}
