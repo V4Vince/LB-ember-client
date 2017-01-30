@@ -1,4 +1,13 @@
+<!-- Visitor view for About me -->
+
 {{#each profile as |profile|}}
+
+<div class="container">
+  <span class="about-me-text">{{profile.aboutMe}}</span>
+</div>
+
+<!-- Picture card.
+
 <div class="col m6">
   {{#md-card-panel
       class="white flow-text
@@ -8,7 +17,7 @@
     <h2>Picture</h2>
   {{/md-card-panel}}
 </div>
-<div class="col s12 m6 flow-text">
-  {{profile.aboutMe}}
-</div>
+
+//picture card -->
+
 {{/each}}

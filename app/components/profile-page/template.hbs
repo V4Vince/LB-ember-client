@@ -1,17 +1,22 @@
-{{#md-card-panel class="about-me-card"
-    bodyClass=""
-    id="card-panel"}}
-    <div class="flow-text">
-      <h1 class="white-text center-align">About</h1>
-      <div class="divider"></div>
-    </div>
-  {{#if isAuthenticated}}
-    <div class="row">
-      {{profile-page/admin-view profile=profile}}
-    </div>
-  {{else}}
-    <div class="row">
-      {{profile-page/visitor-view profile=profile}}
-    </div>
-  {{/if}}
-{{/md-card-panel}}
+<!-- About me with Picture page-->
+
+{{#md-card title="A little about myself..."
+    titleClass="orange-text"
+    image="https://static.pexels.com/photos/10651/photo-1432821596592-e2c18b78144f.jpeg"
+    id="image-card"}}
+    <!-- Card contents -->
+    {{#md-card-content}}
+    {{#if isAuthenticated}}
+      <div class="row">
+        {{profile-page/admin-view profile=profile}}
+      </div>
+    {{else}}
+        {{profile-page/visitor-view profile=profile }}
+    {{/if}}
+    {{/md-card-content}}
+
+    {{#md-card-action}}
+      <!-- Actions here if needed -->
+    {{/md-card-action}}
+
+{{/md-card}}
