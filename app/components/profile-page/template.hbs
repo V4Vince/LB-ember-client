@@ -4,17 +4,18 @@
     titleClass="orange-text"
     image="https://static.pexels.com/photos/10651/photo-1432821596592-e2c18b78144f.jpeg"
     id="image-card"}}
-    <!-- Card contents -->
-    {{#md-card-content}}
-    {{#if isAuthenticated}}
-      <div class="row">
-        {{profile-page/admin-view profile=profile}}
-      </div>
-    {{else}}
-        {{profile-page/visitor-view profile=profile }}
-    {{/if}}
-    {{/md-card-content}}
 
+    <!-- container for card contents -->
+    <div class="container">
+      <!-- Card contents -->
+      {{#md-card-content class="row center-align" }}
+      {{#if isAuthenticated}}
+        {{profile-page/admin-view profile=profile}}
+      {{else}}
+        {{profile-page/visitor-view profile=profile }}
+      {{/if}}
+      {{/md-card-content}}
+    </div>
     {{#md-card-action}}
       <!-- Actions here if needed -->
     {{/md-card-action}}
