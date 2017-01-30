@@ -10,6 +10,7 @@
       <!-- Card contents -->
       {{#md-card-content class="row center-align" }}
       {{#if isAuthenticated}}
+        {{!-- Merge admin-view and visitor view components together --}}
         {{profile-page/admin-view profile=profile}}
       {{else}}
         {{profile-page/visitor-view profile=profile }}
