@@ -13,6 +13,7 @@ Router.map(function () {
   this.route('blogs', { path: '/my-blog'});
   this.route('contacts', { path: '/contact-me'});
   this.route('profile', { path: '/bio'});
+  this.route('profile-single', { path: '/bio-edit/:profile_id'});
 });
 
 export default Router;
