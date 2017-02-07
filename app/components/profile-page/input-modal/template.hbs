@@ -7,7 +7,7 @@
       <!--Input field-->
       <div class="row">
         {{md-textarea label='About Me'
-          value=profile.aboutMe
+          value=aboutMe
           class="col s12"}}
       </div>
     </div>
@@ -15,7 +15,7 @@
     <div class="modal-footer">
       <!--Wire up update/edit function here-->
         <!-- Update Button-->
-        <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'agree'}}>Update!</a>
+        <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'update'}}>Update!</a>
         <!-- Cancel Button-->
         <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>Cancel</a>
     </div>

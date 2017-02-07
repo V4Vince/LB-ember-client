@@ -1,15 +1,20 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  //profile <- from profile-page/admin-view
-  //aboutModalIsOpen <- from profile-page/admin-view
+  tagName: 'div',
+  classNames: ['form-group', 'input-fields'],
 
+  //aboutMe <- from profile-page/admin-tools
+  //aboutModalIsOpen <- from profile-page/admin-tools
+  //update <-- from profile-page/admin-tools
 
   actions: {
 
-    //Handle update action here
-
     closeModal () {
+      this.set('aboutModalIsOpen', false);
+    },
+    update () {
+      this.sendAction('update');
       this.set('aboutModalIsOpen', false);
     },
   }

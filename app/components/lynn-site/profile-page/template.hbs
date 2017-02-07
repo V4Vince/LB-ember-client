@@ -1,4 +1,4 @@
-<!-- About me with Picture page-->
+<!-- Card that contains about me info in Profile view -->
 
 {{#md-card title="A little about myself..."
     titleClass="orange-text"
@@ -9,11 +9,9 @@
     <div class="container">
       <!-- Card contents -->
       {{#md-card-content class="row center-align" }}
-      <!-- profile-page component will handle authentication logic-->
-      {{profile-page
-        allProfiles=allProfiles
-      }}
-
+        {{profile-page/visitor-view
+          profile=allProfiles
+          singleProfile=singleProfile}}
       {{/md-card-content}}
     </div>
     {{#md-card-action}}

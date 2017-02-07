@@ -1,0 +1,12 @@
+{{md-btn text="Edit"
+  class="col s12 m6 offset-m3"
+  action='editAboutModal'}}
+
+
+<!-- Modal with input text box-->
+{{#if aboutModalIsOpen}}
+  {{profile-page/input-modal
+    aboutMe=profileParams.aboutMe
+    aboutModalIsOpen=aboutModalIsOpen
+    update="update"}}
+{{/if}}
