@@ -7,11 +7,8 @@
     <div class="col s9 m5">
       {{contact.contactPath}}
     </div>
-    <div class="col s6 m2">
-      Delete
-    </div>
-    <div class="col s6 m2">
-      Update
-    </div>
+    {{#if isAuthenticated}}
+    {{contact-page/admin-tools contact=contact}}
+    {{/if}}
 
 {{/md-card-panel}}
