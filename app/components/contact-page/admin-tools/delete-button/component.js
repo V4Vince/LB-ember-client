@@ -7,10 +7,9 @@ export default Ember.Component.extend({
   actions: {
     delete () {
       let id = this.get('contact.id');
-      this.get('store').findRecord('contact', id)
-      .then((contact) => {
-        contact.destroyRecord();
-      });
-    }
+      //peekRecord won't make a server GET call
+      let contact = this.get('store').peekRecord('contact', id);
+      return contact.destroyRecord();
+    },
   }
 });
