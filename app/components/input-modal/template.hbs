@@ -5,16 +5,26 @@
       <p class="">{{title}}</p>
       <div class="row">
         <!--show contact type-->
-        {{#if (not isContactPathInputShown)}}
+        {{#if isContactTypeInputShown}}
           {{input-modal/contact-type-input
             contactType=contactData.contactType
-            isContactPathInputShown=isContactPathInputShown }}
+            isContactPathInputShown=isContactPathInputShown
+            isContactTypeInputShown=isContactTypeInputShown}}
         {{/if}}
         <!--show contact path-->
         {{#if isContactPathInputShown}}
           {{input-modal/contact-path-input
             contactPath=contactData.contactPath
-            isContactPathInputShown=isContactPathInputShown }}
+            isContactPathInputShown=isContactPathInputShown
+            isContactConfirmationShown=isContactConfirmationShown
+            }}
+        {{/if}}
+        <!--show contact path-->
+        {{#if isContactConfirmationShown}}
+          <h4>Contact Type: {{contactData.contactType}}</h4>
+          <h4>Contact Path: {{contactData.contactPath}}</h4>
+          {{md-btn text="Save"
+                   action="submit"}}
         {{/if}}
       </div>
     </div>
@@ -22,7 +32,7 @@
     <div class="modal-footer">
       <!--Wire up update/edit function here-->
         <!-- Update Button-->
-        <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'submit'}}>submit!</a>
+        {{!-- <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'submit'}}>submit!</a> --}}
         <!-- Cancel Button-->
         <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>Cancel</a>
     </div>

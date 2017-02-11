@@ -5,8 +5,9 @@ export default Ember.Component.extend({
   //"addContact" <-- new-button
   //showNewContactForm <--new-button
   //"closeModal"
+  isContactTypeInputShown: true,
   isContactPathInputShown: false,
-
+  isContactConfirmationShown: false,
 
   actions: {
     closeModal() {
@@ -16,6 +17,7 @@ export default Ember.Component.extend({
     submit () {
       let contactData = this.get('contactData')
       this.sendAction('addContact', contactData);
+      this.set('showNewContactForm', false);
     },
-  }
+  },
 });

@@ -7,6 +7,7 @@ export default Ember.Component.extend({
   actions: {
     showContactPathInput(){
       this.set('isContactPathInputShown', true);
+      this.set('isContactTypeInputShown', false);
     },
   }
 });
