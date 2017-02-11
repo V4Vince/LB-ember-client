@@ -15,7 +15,8 @@ export default Ember.Component.extend({
       let contact = this.get('store').createRecord('contact', this.get('contactData'));
       return contact.save()
       .then((contact) => {
-        console.log(contact);
+        //this will update the store with the newly created record. Otherwise ID will be NULL
+        this.get('store').push(contact);
       });
     },
   }
