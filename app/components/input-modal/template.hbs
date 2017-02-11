@@ -1,0 +1,29 @@
+<!-- 1.Make modal area larger  -->
+
+{{#md-modal close='closeModal' class="form-modal"}}
+    <div class="modal-content">
+      <p class="">{{title}}</p>
+      <div class="row">
+        <!--show contact type-->
+        {{#if (not isContactPathInputShown)}}
+          {{input-modal/contact-type-input
+            contactType=contactData.contactType
+            isContactPathInputShown=isContactPathInputShown }}
+        {{/if}}
+        <!--show contact path-->
+        {{#if isContactPathInputShown}}
+          {{input-modal/contact-path-input
+            contactPath=contactData.contactPath
+            isContactPathInputShown=isContactPathInputShown }}
+        {{/if}}
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <!--Wire up update/edit function here-->
+        <!-- Update Button-->
+        <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'submit'}}>submit!</a>
+        <!-- Cancel Button-->
+        <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>Cancel</a>
+    </div>
+{{/md-modal}}

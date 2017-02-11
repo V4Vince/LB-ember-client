@@ -1,6 +1,5 @@
 {{#md-card-panel class="row contact-panels"
-  bodyClass="white-text"
-  id=""}}
+  bodyClass="white-text"}}
     <div class="col s3 m3">
       {{contact.contactType}}
     </div>
@@ -8,7 +7,7 @@
       {{contact.contactPath}}
     </div>
     {{#if isAuthenticated}}
-    {{contact-page/admin-tools/delete-button contact=contact}}
+    {{contact-page/admin-tools/delete-button      contact=contact}}
     {{/if}}
 
 {{/md-card-panel}}

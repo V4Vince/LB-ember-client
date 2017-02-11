@@ -1,10 +1,14 @@
 
-
+<!-- Collection of contacts-->
 <h4 class="flow-text center-align">Contact Me</h4>
 
 <ul>
 {{#each contacts as |contact|}}
   {{contact-page/visitor-view contact=contact}}
-
 {{/each}}
+
+<!-- Add new contact button one per collection -->
+{{#if isAuthenticated}}
+  {{contact-page/admin-tools/new-button}}
+{{/if}}
 </ul>
