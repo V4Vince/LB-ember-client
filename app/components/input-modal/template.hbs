@@ -2,6 +2,8 @@
 
 {{#md-modal close='closeModal' class="form-modal"}}
     <div class="modal-content">
+      <p class="flow-text">New Contact</p>
+      <div class="row">
         <!--show contact type-->
         {{#if isContactTypeInputShown}}
           {{input-modal/contact-type-input
@@ -19,18 +21,18 @@
         {{/if}}
         <!--show contact path-->
         {{#if isContactConfirmationShown}}
-          <h4>Contact Type: {{contactData.contactType}}</h4>
-          <h4>Contact Path: {{contactData.contactPath}}</h4>
-          {{md-btn text="Save"
-                   action="submit"}}
+          {{input-modal/contact-confirmation
+            contactData=contactData
+            submit="submit"}}
         {{/if}}
       </div>
+    </div>
 
-    <div class="modal-footer">
+    {{!-- <div class="modal-footer"> --}}
       <!--Wire up update/edit function here-->
         <!-- Update Button-->
         {{!-- <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'submit'}}>submit!</a> --}}
         <!-- Cancel Button-->
-        <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>Cancel</a>
-    </div>
+        {{!-- <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>Cancel</a> --}}
+    {{!-- </div> --}}
 {{/md-modal}}
