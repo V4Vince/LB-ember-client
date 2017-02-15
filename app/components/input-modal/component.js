@@ -9,15 +9,21 @@ export default Ember.Component.extend({
   isContactPathInputShown: false,
   isContactConfirmationShown: false,
 
+  resetForm: function (formName) {
+    this.set('contactData', {});
+    this.set(formName, false);
+  },
+
   actions: {
     closeModal() {
-      this.set('contactData', {});
-      this.set('showNewContactForm', false);
+      this.resetForm('showNewContactForm'
+      );
     },
     submit () {
       let contactData = this.get('contactData')
       this.sendAction('addContact', contactData);
-      this.set('showNewContactForm', false);
+      this.resetForm('showNewContactForm');
+
     },
   },
 });

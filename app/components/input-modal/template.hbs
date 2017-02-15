@@ -2,8 +2,6 @@
 
 {{#md-modal close='closeModal' class="form-modal"}}
     <div class="modal-content">
-      <p class="">{{title}}</p>
-      <div class="row">
         <!--show contact type-->
         {{#if isContactTypeInputShown}}
           {{input-modal/contact-type-input
@@ -27,7 +25,6 @@
                    action="submit"}}
         {{/if}}
       </div>
-    </div>
 
     <div class="modal-footer">
       <!--Wire up update/edit function here-->

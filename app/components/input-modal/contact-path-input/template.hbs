@@ -1,7 +1,10 @@
 
-{{md-input value=contactPath label='Contact Path' class="col s6" validate=true}}
-{{md-btn text="Next"
-         action="isContactConfirmationShown"}}
+<p>Enter your contact information:</p>
 
+<div class="row">
+   {{md-input value=contactPath label='Contact Path' class="col s6" validate=true}}
+   {{md-btn text="Next"
+            action="isContactConfirmationShown"}}
+</div>
 <!-- Create a function for Next buttons.
 Function should determine which to set false and which to set true -->
