@@ -14,6 +14,7 @@ Router.map(function () {
   this.route('contacts', { path: '/contact-me'});
   this.route('profile', { path: '/bio'});
   this.route('profile-single', { path: '/bio-edit/:profile_id'});
+  this.route('settings-page', {path: '/settings'});
 });
 
 export default Router;
