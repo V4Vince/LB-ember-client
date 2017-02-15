@@ -3,12 +3,14 @@
 <h4 class="flow-text center-align">Contact Me</h4>
 
 <ul>
+  {{!-- To Do: If there are no contacts, display prompt for user to add contact(see component)--}}
 {{#each contacts as |contact|}}
   {{contact-page/visitor-view contact=contact}}
 {{/each}}
+</ul>
 
 <!-- Add new contact button one per collection -->
+{{!-- To Do: center this add button --}}
 {{#if isAuthenticated}}
   {{contact-page/admin-tools/new-button}}
 {{/if}}
-</ul>
