@@ -11,6 +11,7 @@ export default Ember.Component.extend({
   actions: {
     editAboutModal () {
       this.set('aboutModalIsOpen', true);
+      this.set('profileParams.aboutMe', this.get('aboutMe'));
     },
     update () {
       let updatedAboutMe = this.get('profileParams.aboutMe');

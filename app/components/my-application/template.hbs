@@ -46,8 +46,8 @@
     {{#link-to 'users' tagName='li'}}
       {{link-to 'User' 'users'}}
     {{/link-to}}
-    {{#link-to 'change-password' tagName='li'}}
-      {{link-to 'Change Password' 'change-password'}}
+    {{#link-to 'settings-page' tagName='li'}}
+      {{link-to 'Review Settings' 'settings-page'}}
     {{/link-to}}
     <li class="divider"></li>
     <li><a href="#" {{action "signOut"}} class="sign-out-button">Sign Out</a></li>
@@ -76,3 +76,23 @@
 <div class="container">
   {{outlet}}
 </div>
+
+<footer class='page-footer white-text'>
+    <div class="container">
+        <div class="row">
+            <div class="col m6 s12">
+                <h5>Site map</h5>
+            </div>
+            <div class="col m6 s12">
+                <h5>Other links</h5>
+            </div>
+        </div>
+    </div>
+    {{#md-copyright text='Lynelle Bennett'
+        startYear=2017
+        class='white-text'}}
+        <a class="white-text right" href="#!">
+          More Links
+        </a>
+    {{/md-copyright}}
+</footer>
