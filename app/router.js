@@ -15,6 +15,7 @@ Router.map(function () {
   this.route('profile', { path: '/bio'});
   this.route('profile-single', { path: '/bio-edit/:profile_id'});
   this.route('settings-page', {path: '/settings'});
+  this.route('not-found', {path: '/*path'});
 });
 
 export default Router;
