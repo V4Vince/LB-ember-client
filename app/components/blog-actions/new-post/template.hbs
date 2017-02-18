@@ -8,23 +8,25 @@
 
 
 {{#if isNewBlogFormOpen}}
-{{#md-modal close='closeModal' class="new-blog-modal"}}
+{{#md-modal close='closeModal' isFooterFixed=true class="new-blog-modal"}}
     <div class="modal-content">
-      <p class="title">New Blog</p>
+      <p class="title">Add new blog post</p>
       <div class="row">
-        {{md-textarea label='About Me'
-          value=profile.aboutMe
+        <div class="row">
+          {{md-input value=blogData.title label='Title' class="col s12 form-group" errors=errors.title}}
+        </div>
+      </div>
+      <div class="row">
+        {{md-textarea label='Blog post'
+          value=blogData.content
           class="col s12"}}
       </div>
     </div>
 
-    <div class="modal-footer">
+    <div class="modal-footer row">
       <!--Wire up update/edit function here-->
-        <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'agree'}}>
-            Done!
-        </a>
-        <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>
-            Cancel
+        <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button col s12 center-align" {{action 'post'}}>
+            Post!
         </a>
     </div>
 {{/md-modal}}
