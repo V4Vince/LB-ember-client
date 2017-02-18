@@ -1,0 +1,31 @@
+<div class="blog-form-button-wpr container">
+  <div class="row">
+    {{md-btn class="col s12"
+      text="New Post"
+      action="showBlogPostForm"}}
+  </div>
+</div>
+
+
+{{#if isNewBlogFormOpen}}
+{{#md-modal close='closeModal' class="new-blog-modal"}}
+    <div class="modal-content">
+      <p class="title">New Blog</p>
+      <div class="row">
+        {{md-textarea label='About Me'
+          value=profile.aboutMe
+          class="col s12"}}
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <!--Wire up update/edit function here-->
+        <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'agree'}}>
+            Done!
+        </a>
+        <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>
+            Cancel
+        </a>
+    </div>
+{{/md-modal}}
+{{/if}}
