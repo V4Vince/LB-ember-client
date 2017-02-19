@@ -11,7 +11,8 @@ export default Ember.Route.extend({
 
     },
     postBlog: function(blogData){
-      this.get('store').createRecord('blog', blogData).save()
+      let newBlog = this.get('store').createRecord('blog', blogData);
+      newBlog.save()
       .then(() => {
         console.log("SUCCESS " + blogData);
         //transition to single blog resource after success
@@ -20,6 +21,9 @@ export default Ember.Route.extend({
         Materialize.toast("Successfully saved new blog post!", 3000);
       })
       .catch(() => {
+        //unloads the record from the store if save() fails.
+        //This prevents any invalid records from being pushed into the store and viewable to user.
+        this.get('store').unloadRecord(newBlog);
         Materialize.toast('Oops! Failed to save new post', 3000);
       });
 

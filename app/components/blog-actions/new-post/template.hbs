@@ -1,3 +1,4 @@
+{{#if isAuthenticated}}
 <div class="blog-form-button-wpr container">
   <div class="row">
     {{md-btn class="col s12"
@@ -5,7 +6,7 @@
       action="showBlogPostForm"}}
   </div>
 </div>
-
+{{/if}}
 
 {{#if isNewBlogFormOpen}}
 {{#md-modal close='closeModal' isFooterFixed=true class="new-blog-modal"}}
