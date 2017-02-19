@@ -5,20 +5,4 @@
 {{blog-actions/new-post postBlog="postBlog"}}
 {{!-- {{blog-actions/new-post}} --}}
 
-{{#each model as |blog|}}
-{{#md-card title=blog.title class="blog-card"}}
-    {{#md-card-content}}
-        <p>{{moment-format blog.createdAt 'MM/DD/YYYY'}}</p>
-        {{blog.content}}
-    {{/md-card-content}}
-
-    {{#md-card-action class="blog-card-action"}}
-      {{blog-actions/admin-tools
-        editBlog="editBlog"
-        deleteBlog="deleteBlog"
-        blog=blog}}
-        {{!-- {{#link-to "cards"}}Link 1{{/link-to}}
-        {{#link-to "cards"}}Link 2{{/link-to}} --}}
-    {{/md-card-action}}
-{{/md-card}}
-{{/each}}
+{{lynn-site/blog-list blogs=model}}
