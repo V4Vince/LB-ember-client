@@ -4,3 +4,10 @@
 {{else}}
 <a href="#" {{action "like"}}>Like</a>
 {{/if}}
+
+{{#if isEditBlogFormOpen}}
+{{blog-actions/edit-blog
+    isEditBlogFormOpen=isEditBlogFormOpen
+    editBlog=editBlog
+    blog=blog }}
+{{/if}}

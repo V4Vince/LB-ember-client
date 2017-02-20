@@ -1,0 +1,23 @@
+
+{{#md-modal close='closeModal' isFooterFixed=true class="edit-blog-modal"}}
+    <div class="modal-content">
+      <p class="title">Edit Blog Post</p>
+      <div class="row">
+        <div class="row">
+          {{md-input value=blog.title label='Title' class="col s12 form-group" errors=errors.title}}
+        </div>
+      </div>
+      <div class="row">
+        {{md-textarea label='Blog post'
+          value=blog.content
+          class="col s12"}}
+      </div>
+    </div>
+
+    <div class="modal-footer row">
+      <!--Wire up update/edit function here-->
+        <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button col s12 center-align" {{action 'edit' blog}}>
+            Post!
+        </a>
+    </div>
+{{/md-modal}}

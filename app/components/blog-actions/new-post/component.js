@@ -9,6 +9,7 @@ export default Ember.Component.extend({
   blogData: {},
 
   isNewBlogFormOpen: false,
+
   toggleBlogPostForm: function (thingToToggle){
     if (this.get(thingToToggle)) {
       this.set(thingToToggle, false);
@@ -22,12 +23,12 @@ export default Ember.Component.extend({
       this.toggleBlogPostForm('isNewBlogFormOpen');
     },
     post: function(){
-      let data = this.get('blogData');
-      console.log(data);
       this.sendAction('postBlog', this.get('blogData'));
+      this.set('blogData', {});
       this.toggleBlogPostForm('isNewBlogFormOpen');
     },
     closeModal: function(){
+      this.set('blogData', {});
       this.set('isNewBlogFormOpen', false);
     },
   }

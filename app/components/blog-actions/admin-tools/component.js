@@ -3,13 +3,18 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   auth: Ember.inject.service(),
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
-  //blog <- from blog route
-  //editBlog <- from blog route
-  //deleteBlog <- from blog route
+  //blog <- from lynn-site/blog-list
+  //editBlog <- from lynn-site/blog-list
+  //deleteBlog <- from lynn-site/blog-list
+
+  isEditBlogFormOpen: false,
+
   actions: {
     edit(){
-
-      this.sendAction('editBlog');
+      this.set('isEditBlogFormOpen', true);
+    },
+    editBlog(blog){
+      this.sendAction('editBlog', blog);
     },
     delete(blog){
       this.sendAction('deleteBlog', blog);
