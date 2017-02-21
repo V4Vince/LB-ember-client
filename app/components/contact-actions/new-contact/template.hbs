@@ -1,0 +1,38 @@
+{{#if isAuthenticated}}
+<div class="contact-form-button-wpr container">
+  <div class="row">
+    {{md-btn class="col s12"
+      text="Add Contact"
+      action="showContactPostForm"}}
+  </div>
+</div>
+{{/if}}
+
+{{#if showContactPostForm}}
+{{#md-modal close='toggleModal' isFooterFixed=true class="new-contact-modal"}}
+    <div class="modal-content">
+      <p class="title">Add a new contact</p>
+      <div class="row">
+        <div class="row">
+          <div class="row">
+            {{md-select content=contactTypes
+              value=contactData.type
+              prompt="Select contact type"
+              optionLabelPath="content.type"
+              optionValuePath="content" class="col s12 m6"}}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        {{md-input value=contactData.path label='Contact Path' class="col s6" validate=true}}
+      </div>
+    </div>
+
+    <div class="modal-footer row">
+      <!--Wire up update/edit function here-->
+        <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button col s12 center-align" {{action 'post'}}>
+            Post!
+        </a>
+    </div>
+{{/md-modal}}
+{{/if}}
