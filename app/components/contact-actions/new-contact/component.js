@@ -12,5 +12,25 @@ export default Ember.Component.extend({
     {choice: 'E', type: 'Phone'},
   ],
 
+  //postContact <- from contact route
+  isContactPostForm: false,
+
+  contactData: {},
+
+  actions: {
+    post(){
+      let contactData = this.get('contactData');
+      this.sendAction('postContact', this.get('contactData'));
+      this.set('isContactPostForm', false);
+      console.log(contactData);
+      this.set(contactData, {});
+    },
+    showContactPostForm (){
+      this.set('isContactPostForm', true);
+    },
+    closeModal (){
+      this.set('isContactPostForm', false);
+    },
+  },
 
 });
