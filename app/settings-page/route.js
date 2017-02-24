@@ -3,6 +3,8 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   auth: Ember.inject.service(),
 
+  //Checks to see if user is authenticated before granting access
+  //If not, redirects to sign-in
   beforeModel(){
     let isAuth = this.get('auth').get('isAuthenticated');
     if (!isAuth) {
@@ -17,6 +19,7 @@ export default Ember.Route.extend({
     }
   },
 
+  //Returns 2+ models
   model() {
     return Ember.RSVP.hash({
       profile: this.store.findAll('profile'),
@@ -24,6 +27,7 @@ export default Ember.Route.extend({
     });
   },
 
+  //Settings controller with the diifferent models
   setupController(controller, models) {
     // controller.set('blogs', models.blogs);
     // controller.set('profile', models.profile);
