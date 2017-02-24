@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   auth: Ember.inject.service(),
-  flashMessages: Ember.inject.service(),
 
   model() {
     return Ember.RSVP.hash({
@@ -12,10 +11,9 @@ export default Ember.Route.extend({
   },
 
 setupController(controller, models) {
-  // controller.set('posts', models.posts);
-  // controller.set('tags', models.tags);
-  // controller.set('categories', models.categories);
-  // controller.set('weather', models.weather);
+  // controller.set('blogs', models.blogs);
+  // controller.set('profile', models.profile);
+  // controller.set('contacts', models.contacts);
 
   // same thing as above but cleaner
   controller.setProperties(models);
@@ -31,11 +29,10 @@ actions: {
       .success('Successfully changed your password!');
     })
     .then(() => {
-      this.get('flashMessages').warning('You have been signed out.');
+      Materialize.toast("Password changed successfully!", 4000);
     })
     .catch(() => {
-      this.get('flashMessages')
-      .danger('There was a problem. Please try again.');
+      Materialize.toast("Error", 4000);
     });
   },
 },

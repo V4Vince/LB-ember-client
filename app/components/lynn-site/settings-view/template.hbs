@@ -1,1 +1,67 @@
-{{yield}}
+<div class="col m8">
+  <span class="card-title">Basic Info</span>
+  {{#each profile as |profile|}}
+  {{#md-card id="basic-info-card"}}
+      {{#md-card-action}}
+      First Name: {{profile.firstName}}
+      {{/md-card-action}}
+
+      {{#md-card-action}}
+      Last Name: {{profile.lastName}}
+      {{/md-card-action}}
+
+      {{#md-card-action}}
+      Birthday: {{profile.birthday}}
+      {{/md-card-action}}
+
+      {{#md-card-action}}
+      <a href="#">Edit basic info</a>
+      {{/md-card-action}}
+  {{/md-card}}
+  {{/each}}
+
+
+  {{#md-card id="contact-info-card"}}
+    {{#each contacts as |contact|}}
+      {{#md-card-action}}
+        {{contact.contactType}}:
+        {{contact.contactPath}}
+      {{/md-card-action}}
+    {{/each}}
+      {{#md-card-action}}
+        <a href="#">Edit contact info</a>
+      {{/md-card-action}}
+  {{/md-card}}
+</div>
+
+
+<div class="col m4">
+  <span class="card-title">Options</span>
+  {{#md-card id="settings-options"}}
+
+    {{#md-card-action}}
+      <a href="#" {{action "showChangePw"}}>Change password</a>
+    {{/md-card-action}}
+
+    {{#md-card-action}}
+      <a href="#">Edit about me</a>
+    {{/md-card-action}}
+
+    {{#md-card-action}}
+      <a href="#">Edit Blog intro</a>
+    {{/md-card-action}}
+
+    {{#md-card-action}}
+      <a href="#">Edit contact intro</a>
+    {{/md-card-action}}
+
+    {{#md-card-action}}
+      <a href="#">Sign out</a>
+    {{/md-card-action}}
+
+  {{/md-card}}
+</div>
+
+{{#if isChangePwShown}}
+{{change-password-form submit="changePassword"}}
+{{/if}}

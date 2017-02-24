@@ -1,18 +1,9 @@
-<h2>Settings</h2>
+{{#md-card-panel class="center-align"
+    bodyClass=""
+    id="card-panel"}}
+        You can edit your page settings here
+{{/md-card-panel}}
 
-<h4>Basic Info:</h4>
-{{#each profile as |profile|}}
-<p>First Name: {{profile.firstName}}</p>
-<p>Last Name: {{profile.lastName}}</p>
-<p>Birthday: {{profile.birthday}}</p>
-{{/each}}
-
-<h4>Contact:</h4>
-{{#each contacts as |contact|}}
-<p>Contact: {{contact.contactType}}</p>
-<p>{{contact.contactPath}}</p>
-{{/each}}
-
-
-<h2>Change Password</h2>
-{{change-password-form submit="changePassword"}}
+<div class="row">
+    {{lynn-site/settings-view profile=profile contacts=contacts }}
+</div>
