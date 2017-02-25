@@ -1,1 +1,3 @@
-{{lynn-site/profile-page allProfiles=model }}
+{{#each model as |profile|}}
+  {{lynn-site/profile-page profile=profile editAboutMe="editAboutMe"}}
+{{/each}}

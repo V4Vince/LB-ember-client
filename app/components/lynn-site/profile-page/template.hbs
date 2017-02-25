@@ -5,17 +5,20 @@
     image="https://static.pexels.com/photos/10651/photo-1432821596592-e2c18b78144f.jpeg"
     id="image-card"}}
 
-    <!-- container for card contents -->
-    <div class="container">
-      <!-- Card contents -->
-      {{#md-card-content class="row center-align" }}
-        {{profile-page/visitor-view
-          profile=allProfiles
-          singleProfile=singleProfile}}
-      {{/md-card-content}}
-    </div>
+    <!-- Card contents -->
+    {{#md-card-content class="row center-align" }}
+      <div class="about-me-comp-wppr">
+        <span class="about-me-text">
+          <pre>{{profile.aboutMe}}</pre>
+        </span>
+      </div>
+    {{/md-card-content}}
+    <!-- Actions-->
     {{#md-card-action}}
-      <!-- Actions here if needed -->
+      {{profile-actions/admin-tools
+          class="container"
+          profile=profile
+          editAboutMe=editAboutMe}}
     {{/md-card-action}}
 
 {{/md-card}}

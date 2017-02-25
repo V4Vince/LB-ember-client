@@ -1,0 +1,13 @@
+{{#if isAuthenticated}}
+<div class="container">
+  <a {{action 'showAboutModal'}}>Edit</a>
+</div>
+{{/if}}
+
+{{#if aboutModalIsOpen}}
+  {{profile-actions/edit-about-me
+    aboutModalIsOpen=aboutModalIsOpen
+    editAboutMe=editAboutMe
+    profile=profile
+    }}
+{{/if}}

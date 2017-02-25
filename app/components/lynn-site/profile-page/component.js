@@ -4,6 +4,11 @@ export default Ember.Component.extend({
   auth: Ember.inject.service(),
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
 
-  //allProfiles
-  //singleProfile
+  //profiles <-- collection from route
+  //editAboutMe <-- action from route
+  actions: {
+    editAboutMe(profile){
+      this.sendAction('editAboutMe', profile);
+    },
+  },
 });
