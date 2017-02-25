@@ -2,17 +2,15 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   auth: Ember.inject.service(),
-  flashMessages: Ember.inject.service(),
 
   actions: {
     signIn (credentials) {
       return this.get('auth').signIn(credentials)
       .then(() => console.log("TRANSITIONS"))
       .then(() => this.transitionTo('application'))
-      .then(() => this.get('flashMessages').success('Thanks for signing in!'))
+      .then(() => Materialize.toast("Hello, Lynn", 4000), 'blue')
       .catch(() => {
-        this.get('flashMessages')
-        .danger('There was a problem. Please try again.');
+        Materialize.toast("Make sure your email and password are correct", 3000, 'red');
       });
     },
   },
