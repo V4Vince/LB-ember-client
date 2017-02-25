@@ -35,7 +35,7 @@
 </div>
 
 
-<div class="col m4">
+<div class="col s12 m4">
   <span class="card-title">Options</span>
   {{#md-card id="settings-options"}}
 
@@ -63,5 +63,5 @@
 </div>
 
 {{#if isChangePwShown}}
-{{change-password-form submit="changePassword"}}
+{{settings-action/change-password changePw="changePw" isChangePwShown=isChangePwShown}}
 {{/if}}

@@ -1,0 +1,26 @@
+{{#md-modal close='closeModal' class="changePw-modal"}}
+    <div class="modal-content">
+      <p class="title">Change your password</p>
+      <div class="row">
+        {{md-input value=passwords.previous type="password" label='Current Password' class="col s12 form-group"}}
+      </div>
+      <div class="row">
+        {{md-input value=passwords.next type="password" label='New Password' class="col s12 form-group"}}
+      </div>
+      <div class="row center-align">
+        <button class="btn btn-default col s12 m4" {{action "reset"}}>
+          Cancel
+        </button>
+        <!--Wire up update/edit function here-->
+        <button type="submit" class="btn btn-primary col s12 m4" {{action "changePw"}}>
+          Change Password
+        </button>
+      </div>
+
+    </div>
+
+    {{!-- <a href="#" class="col s6 m4" {{action "cancel"}}>Cancel</a>
+    <a href="#" class="col s6 m4" {{action "changePw"}}>Change Password</a> --}}
+
+
+{{/md-modal}}
