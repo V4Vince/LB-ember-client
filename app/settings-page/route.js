@@ -49,6 +49,18 @@ export default Ember.Route.extend({
         Materialize.toast("Make sure you enter your current password correctly", 4000, 'red');
       });
     },
+
+    signOut () {
+      this.get('auth').signOut()
+      .then(() => this.transitionTo('application'))
+      .then(() => {
+        Materialize.toast("You have been signed out", 3000);
+      })
+      .catch(() => {
+        Materialize.toast("There was a problem. Make sure you are already signed in.", 3000, 'red');
+      });
+      this.store.unloadAll();
+    },
   },
 
 });

@@ -12,5 +12,9 @@ export default Ember.Component.extend({
     changePw(passwords){
       this.sendAction('changePw', passwords);
     },
+
+    logOut(){
+      this.sendAction('logOut');
+    }
   },
 });
