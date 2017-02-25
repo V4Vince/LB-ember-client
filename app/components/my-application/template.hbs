@@ -24,11 +24,11 @@
 {{#md-navbar name='Lynnelle Bennett' id="main-nav-bar"}}
   <!-- A workaround to get the "active" class
     to apply to the active <li> automatically -->
-    {{#link-to 'profile' tagName='li'}}
-      {{link-to 'Bio' 'profile'}}
-    {{/link-to}}
     {{#link-to 'blogs' tagName='li'}}
       {{link-to 'Blog' 'blogs'}}
+    {{/link-to}}
+    {{#link-to 'profile' tagName='li'}}
+      {{link-to 'About' 'profile'}}
     {{/link-to}}
     {{#link-to 'contacts' tagName='li'}}
       {{link-to 'Contact' 'contacts'}}

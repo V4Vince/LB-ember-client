@@ -5,31 +5,31 @@
     <ul>
       <!-- Settings link-->
       <li>
-        <a href="/settings" class="btn-floating red">
+        {{#link-to "settings-page" class="btn-floating"}}
           {{tooltip-on-element side="left" text='Settings'}}
           <i class="material-icons">settings</i>
-        </a>
+        {{/link-to}}
       </li>
       <!-- About me link-->
       <li>
-        <a href="/about-me" class="btn-floating red">
-          {{tooltip-on-element side="left" text='About me'}}
+        {{#link-to "profile" class="btn-floating"}}
+          {{tooltip-on-element side="left" text='About Me'}}
           <i class="material-icons">person_pin</i>
-        </a>
+        {{/link-to}}
       </li>
       <!-- Blogs link-->
       <li>
-        <a href="/my-blog" class="btn-floating red">
-          {{tooltip-on-element side="left" text='Blog'}}
+        {{#link-to "blogs" class="btn-floating"}}
+          {{tooltip-on-element side="left" text='Blogs'}}
           <i class="material-icons">library_books</i>
-        </a>
+        {{/link-to}}
       </li>
       <!-- Contact link-->
       <li>
-        <a href="/contact-me" class="btn-floating red">
+        {{#link-to "contacts" class="btn-floating"}}
           {{tooltip-on-element side="left" text='Contacts'}}
           <i class="material-icons">contacts</i>
-        </a>
+        {{/link-to}}
       </li>
 
       {{!-- <li>
