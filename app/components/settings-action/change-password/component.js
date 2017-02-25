@@ -9,6 +9,8 @@ export default Ember.Component.extend({
   actions: {
     changePw () {
       this.sendAction('changePw', this.get('passwords'));
+      this.set('passwords', {});
+      this.set('isChangePwShown', false);
     },
 
     cancel () {

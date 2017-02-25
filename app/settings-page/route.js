@@ -11,10 +11,10 @@ export default Ember.Route.extend({
       console.log(isAuth);
       this.transitionTo('sign-in')
       .then(() => {
-        Materialize.toast("Please sign in to access your seetings", 4000);
+        Materialize.toast("Please sign in to access your seetings", 4000, 'red');
       })
       .catch(() => {
-        Materialize.toast("Error", 4000);
+        Materialize.toast("Something went wrong", 4000, 'red');
       });
     }
   },
@@ -43,14 +43,10 @@ export default Ember.Route.extend({
       .then(() => this.get('auth').signOut())
       .then(() => this.transitionTo('sign-in'))
       .then(() => {
-        this.get('flashMessages')
-        .success('Successfully changed your password!');
-      })
-      .then(() => {
-        Materialize.toast("Password changed successfully!", 4000);
+        Materialize.toast("Password changed successfully!", 4000, 'green');
       })
       .catch(() => {
-        Materialize.toast("Error", 4000);
+        Materialize.toast("Make sure you enter your current password correctly", 4000, 'red');
       });
     },
   },

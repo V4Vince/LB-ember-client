@@ -8,7 +8,9 @@ export default Ember.Route.extend({
       return this.get('auth').signIn(credentials)
       .then(() => console.log("TRANSITIONS"))
       .then(() => this.transitionTo('application'))
-      .then(() => Materialize.toast("Hello, Lynn", 4000), 'blue')
+      .then(() => {
+        Materialize.toast("Hello, Lynn", 4000, 'green');
+      })
       .catch(() => {
         Materialize.toast("Make sure your email and password are correct", 3000, 'red');
       });
