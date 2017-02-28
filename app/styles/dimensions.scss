@@ -23,3 +23,13 @@ footer.page-footer {
 @media screen and (max-width: 450px) {
 
 }
+.image-card-panel {
+  background-color: $primary-color;
+  height: 100px;
+  margin: 0;
+  border-radius: 0;
+}
+
+.profile-image {
+  position: relative;
+}

@@ -2,14 +2,19 @@
 
 {{#md-card title="A little about myself..."
     titleClass="orange-text"
-    image="https://static.pexels.com/photos/10651/photo-1432821596592-e2c18b78144f.jpeg"
     id="image-card"}}
-
+    {{#md-card-content class="image-card-panel"}}
+    <div class="row">
+      <div class="col s12">
+        <img src="" alt="">
+      </div>
+    </div>
+    {{/md-card-content}}
     <!-- Card contents -->
     {{#md-card-content class="row center-align" }}
       <div class="about-me-comp-wppr">
         <span class="about-me-text">
-          <pre>{{profile.aboutMe}}</pre>
+          {{profile.aboutMe}}
         </span>
       </div>
     {{/md-card-content}}
