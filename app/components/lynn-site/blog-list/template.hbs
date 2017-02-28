@@ -3,7 +3,8 @@
 {{moment-format blog.createdAt 'MM/DD/YYYY'}}
 {{#md-card title=blog.title class="blog-card"}}
     {{#md-card-content}}
-        {{blog.content}}
+
+        <p class=" left-align flow-text">{{blog.content}}</p>
     {{/md-card-content}}
 
     {{#md-card-action class="blog-card-action"}}
