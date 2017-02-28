@@ -11,9 +11,17 @@
       {{/md-card-action}}
 
       {{#md-card-action}}
-      <a href="#">Edit basic info</a>
+      <a href="#" {{action "showUpdateBasicInfo"}}>Edit basic info</a>
       {{/md-card-action}}
   {{/md-card}}
+
+  <!--Change basic-info modal-->
+    {{#if isChangeBasicInfoShown}}
+    {{settings-action/update-basic-info
+        updateBasicInfo="updateBasicInfo"
+        isChangeBasicInfoShown=isChangeBasicInfoShown
+        profile=profile}}
+    {{/if}}
   {{/each}}
 
 

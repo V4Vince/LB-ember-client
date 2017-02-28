@@ -1,0 +1,27 @@
+{{#md-modal close='cancel' class="changeBasicInfo-modal"}}
+    <div class="modal-content">
+      <p class="title">Basic Info Settings</p>
+
+      <div class="row">
+        {{md-input value=profile.firstName type="text" label='First Name' class="col s12 m6 form-group"}}
+        {{md-input value=profile.lastName type="text" label='Last Name' class="col s12 m6 form-group"}}
+        {{md-input-date value=profile.birthday type="date" label='DOB' class="col s12 m6 form-group"}}
+      </div>
+
+      <div class="row center-align">
+        <button class="btn btn-default col s12 m4" {{action "cancel"}}>
+          Cancel
+        </button>
+        <!--Wire up update/edit function here-->
+        <button type="submit" class="btn btn-primary col s12 m4" {{action "updateBasicInfo" profile}}>
+          Update
+        </button>
+      </div>
+
+    </div>
+
+    {{!-- <a href="#" class="col s6 m4" {{action "cancel"}}>Cancel</a>
+    <a href="#" class="col s6 m4" {{action "changePw"}}>Change Password</a> --}}
+
+
+{{/md-modal}}

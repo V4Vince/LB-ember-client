@@ -38,6 +38,17 @@ export default Ember.Route.extend({
   },
 
   actions: {
+    changeBasicInfo: function(profile){
+      profile.save()
+      // console.log(basicInfo)
+      .then(() => {
+        Materialize.toast("Basic info updated successfully", 3000, 'green');
+      })
+      .catch(() => {
+        Materialize.toast("Update basic info failed", 3000, 'red');
+      });
+    },
+
     changePassword (passwords) {
       this.get('auth').changePassword(passwords)
       .then(() => this.get('auth').signOut())
