@@ -1,4 +1,4 @@
-{{#md-modal close='closeModal' class="changePw-modal"}}
+{{#md-modal close='cancel' class="changePw-modal"}}
     <div class="modal-content">
       <p class="title">Change your password</p>
       <div class="row">
@@ -8,7 +8,7 @@
         {{md-input value=passwords.next type="password" label='New Password' class="col s12 form-group"}}
       </div>
       <div class="row center-align">
-        <button class="btn btn-default col s12 m4" {{action "reset"}}>
+        <button class="btn btn-default col s12 m4" {{action "cancel"}}>
           Cancel
         </button>
         <!--Wire up update/edit function here-->
