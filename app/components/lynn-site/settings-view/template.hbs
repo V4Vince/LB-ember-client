@@ -3,11 +3,7 @@
   {{#each profile as |profile|}}
   {{#md-card id="basic-info-card"}}
       {{#md-card-action}}
-      First Name: {{profile.firstName}}
-      {{/md-card-action}}
-
-      {{#md-card-action}}
-      Last Name: {{profile.lastName}}
+      Full Name: {{profile.fullName}}
       {{/md-card-action}}
 
       {{#md-card-action}}
@@ -62,6 +58,8 @@
   {{/md-card}}
 </div>
 
+<!--Change PW modal-->
+
 {{#if isChangePwShown}}
-{{settings-action/change-password changePw="changePw" isChangePwShown=isChangePwShown}}
+{{settings-action/change-password changePw="changePw" isChangePwShown=isChangePwShown }}
 {{/if}}
