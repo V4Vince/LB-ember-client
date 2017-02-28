@@ -14,3 +14,16 @@
 .brand-logo {
   font-family: 'Pacifico';
 }
+
+.profile-caption {
+  color: white;
+  font-weight: 400 !important;
+  font-family: 'Pacifico';
+  &.card-title{
+    margin-left: -15px;
+    margin-bottom: -45px;
+  }
+}
+.about-lynn-name {
+  font-size: 75px;
+}
