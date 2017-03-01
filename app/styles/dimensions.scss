@@ -19,10 +19,6 @@ footer.page-footer {
   margin-bottom: 50px;
 }
 
-// Small screens
-@media screen and (max-width: 450px) {
-
-}
 .image-card-panel{
   background-color: $primary-color;
   margin: 0;
@@ -30,4 +26,30 @@ footer.page-footer {
   padding-top: 45px;
   padding-bottom: 25px;
   text-align: center;
+}
+
+// Small screens
+@media screen and (max-width: 450px) {
+
+  img.profile-image {
+    height: 200px;
+  }
+
+}
+
+// Small screens
+@media screen and (min-width: 450px) {
+
+  img.profile-image {
+    height: 250px;
+  }
+
+}
+// large screens
+@media screen and (min-width: 650px) {
+
+  img.profile-image {
+    height: 300px;
+  }
+
 }
