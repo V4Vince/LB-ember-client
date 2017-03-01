@@ -1,7 +1,11 @@
 {{#if isAuthenticated}}
-<div class="container">
+{{!-- <div class="container">
   <a {{action 'showAboutModal'}}>Edit</a>
+</div> --}}
+<div class="edit-about-me-btn-wrppr container">
+  <a class="edit-about-me-btn waves-effect waves-light btn {{action "showAboutModal"}}"><i class="material-icons right">mode_edit</i>Edit</a>
 </div>
+
 {{/if}}
 
 {{#if aboutModalIsOpen}}

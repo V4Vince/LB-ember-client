@@ -4,7 +4,12 @@
 // #edit-about-me-modal {
 //   color: bold;
 // }
-
+.about-me-title{
+  color: $primary-color;
+}
+.about-me-comp-wppr{
+  margin-top: 0;
+}
 .about-me-text {
   font-size: 1.2rem;
   white-space: pre-wrap;

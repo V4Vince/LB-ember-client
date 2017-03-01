@@ -1,7 +1,7 @@
 <!-- Card that contains about me info in Profile view -->
 
 {{#md-card title="About Me"
-    titleClass="orange-text"
+    titleClass="about-me-title"
     id="image-card"}}
     {{#md-card-panel class="image-card-panel"}}
     <picture>
@@ -12,24 +12,25 @@
     </picture>
     <p class="profile-caption card-title"> Get to know</p>
     <p><span class="profile-caption about-lynn-name">Lynnelle</span></p>
-
     {{/md-card-panel}}
 
 
     <!-- Card contents -->
     {{#md-card-content class="row center-align" }}
       <div class="about-me-comp-wppr container">
-        <span class="about-me-text">
+        <p class="about-me-text">
           {{profile.aboutMe}}
-        </span>
+        </p>
       </div>
     {{/md-card-content}}
     <!-- Actions-->
     {{#md-card-action}}
+    <div class="container">
       {{profile-actions/admin-tools
-          class="container"
           profile=profile
           editAboutMe=editAboutMe}}
+    </div>
+
     {{/md-card-action}}
 
 {{/md-card}}
