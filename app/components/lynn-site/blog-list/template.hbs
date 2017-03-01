@@ -1,10 +1,9 @@
 {{#each sortedBlog as |blog|}}
 
-{{moment-format blog.createdAt 'MM/DD/YYYY'}}
-{{#md-card title=blog.title class="blog-card"}}
-    {{#md-card-content}}
-
-        <p class=" left-align flow-text">{{blog.content}}</p>
+{{#md-card title=blog.title titleClass="blog-title" class="blog-card"}}
+<span class="badge" data-badge-caption="custom caption">{{moment-format blog.createdAt 'MM/DD/YYYY'}}</span>
+    {{#md-card-content class="container"}}
+        <p class="blog-content left-align">{{blog.content}}</p>
     {{/md-card-content}}
 
     {{#md-card-action class="blog-card-action"}}
@@ -14,4 +13,5 @@
         blog=blog}}
     {{/md-card-action}}
 {{/md-card}}
+
 {{/each}}
