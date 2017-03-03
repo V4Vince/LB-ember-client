@@ -51,17 +51,41 @@
 <footer class='page-footer white-text'>
     <div class="container">
         <div class="row">
+          <!--Social Media Icons-->
             <div class="col m6 s12">
-                <ul>
-                  <li>AudioBooks</li>
-                  <li>Blog</li>
-                  <li>About Me</li>
-                  <li>Contact</li>
+                <ul id="social-media">
+                  <!--Facebook-->
+                  <li>
+                    <a target="_blank" href="http://www.facebook.com/lynelle.bennett">
+                      <img src="http://www.icons101.com/icon_ico/id_78875/facebook.ico" alt="" class="facebook"></a>
+                    </li>
+                    <!--Google+-->
+                    <li>
+                      <a target="_blank" href="http://www.plus.google.com">
+                        <img src="http://voile-cap250.fr/wp-content/uploads/2016/10/google-plus_icon-icons.com_65930.png" alt="" class="Google-plus"></a>
+                    </li>
+                    <!--Twitter-->
+                    <li>
+                      <a target="_blank" href="http://www.twitter.com">
+                        <img src="http://www.icons101.com/icon_ico/id_78915/twitter.ico" alt="" class="twitter"></a>
+                    </li>
+                    <!--linkedin-->
+                    <li>
+                      <a target="_blank" href="http://www.linkedin.com">
+                        <img src="https://freeiconshop.com/wp-content/uploads/edd/linkedin-flat.png" alt="" class="linkedin"></a>
+                    </li>
                 </ul>
             </div>
-            <div class="col m6 s12">
-                <h5>Other links</h5>
+            <!--Site Map Links-->
+            <div class="col s12 m6">
+                <ul id="site-map">
+                  <li>AudioBooks</li>
+                  <li>{{#link-to "blogs" class="footer-links"}}My Blog{{/link-to}}</li>
+                  <li>{{#link-to "profile" class="footer-links"}}About{{/link-to}}</li>
+                  <li>{{#link-to "contacts" class="footer-links"}}Contact{{/link-to}}</li>
+                </ul>
             </div>
+
         </div>
     </div>
     {{#md-copyright text='Lynelle Bennett'

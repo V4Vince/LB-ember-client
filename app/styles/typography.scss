@@ -47,3 +47,24 @@ p.blog-content{
 .about-lynn-name {
   font-size: 75px;
 }
+#site-map {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  & a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+#social-media{
+  text-align: center;
+  list-style-type: none;
+  & li {
+    display: inline-block;
+  }
+  & img {
+    height: 50px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+}
