@@ -46,9 +46,10 @@ body {
   border-style: none;
 }
 
-
 .submit-button {
   background-color: $button-color;
+  text-align: center;
+  color: white;
 }
 .cancel-button {
   background-color: $button-cancel-color;

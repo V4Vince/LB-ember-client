@@ -9,30 +9,30 @@
 {{/if}}
 
 {{#if isContactPostForm}}
-{{#md-modal close='closeModal' isFooterFixed=true class="new-contact-modal"}}
+{{#md-modal close='closeModal'  class="new-contact-modal"}}
     <div class="modal-content">
-      <p class="title">Add a new contact</p>
-      <div class="row">
+      <p class="card-title">Add a new way to contact you</p>
+      <div class="container">
+        <!--Contact type Select-->
         <div class="row">
-          <div class="row">
-            {{md-select content=contactTypes
-              value=contactData.contactType
-              prompt="Select contact type"
-              optionLabelPath="content.type"
-              optionValuePath="content.type" class="col s12 m6"}}
-          </div>
+          {{md-select content=contactTypes
+            value=contactData.contactType
+            prompt="Select contact type"
+            optionLabelPath="content.type"
+            optionValuePath="content.type" class="col s12"}}
+        </div>
+        <!--Contact Address input-->
+        <div class="row">
+          {{md-input value=contactData.contactPath label='Contact Path' class="col s12" validate=true}}
+        </div>
+        <!--Submit button-->
+        <div class="row">
+          {{md-btn class="col s12 submit-button"
+            buttonType="flat"
+            text="Save"
+            action="post"}}
         </div>
       </div>
-      <div class="row">
-        {{md-input value=contactData.contactPath label='Contact Path' class="col s6" validate=true}}
-      </div>
-    </div>
-
-    <div class="modal-footer row">
-      <!--Wire up update/edit function here-->
-        <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button col s12 center-align" {{action 'post'}}>
-            Post!
-        </a>
     </div>
 {{/md-modal}}
 {{/if}}
