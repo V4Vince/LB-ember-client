@@ -19,11 +19,11 @@ export default Ember.Component.extend({
 
   actions: {
     post(){
-      let contactData = this.get('contactData');
       this.sendAction('postContact', this.get('contactData'));
       this.set('isContactPostForm', false);
-      console.log(contactData);
-      this.set(contactData, {});
+      console.log(this.get('contactData'));
+      // this.set(this.get('contactData'), {});
+      console.log(this.get('contactData'));
     },
     showContactPostForm (){
       this.set('isContactPostForm', true);

@@ -5,12 +5,18 @@
       <h5 class="white-text center-align">Contact Information</h5>
     {{/md-card-panel}}
     {{#md-card-content}}
+    {{#if contacts}}
       <ul>
         {{!-- To Do: If there are no contacts, display prompt for user to add contact(see component)--}}
       {{#each contacts as |contact|}}
         {{contact-page/visitor-view contact=contact}}
       {{/each}}
       </ul>
+      {{else}}
+      <div class="no-contact-info-display">
+        <p class="valign center-align">There are no contact information posted yet.</p>
+      </div>
+      {{/if}}
     {{/md-card-content}}
 {{/md-card}}
 

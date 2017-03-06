@@ -3,8 +3,11 @@
     <div class="col s4 valign-wrapper">
       <span class="grey-text left-align valign">{{contact.contactType}}</span>
     </div>
-    <div class="col s8">
+    <div class="col s6">
       <span class="contact-path right-align valign">{{contact.contactPath}}</span>
     </div>
+    {{#if isAuthenticated}}
+      {{contact-page/admin-tools/delete-button contact=contact}}
+    {{/if}}
   </div>
 </div>
