@@ -64,6 +64,12 @@ body {
 .delete-icon {
   color: red;
 }
+.edit-icon{
+  color: green;
+}
+.tool-tipped-dialogue{
+  z-index: 2; //prevents dialogue from being hidden behind action-container in action cards
+}
 .no-contact-info-display{
   margin-top: 25px;
   margin-bottom: 25px;

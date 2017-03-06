@@ -1,6 +1,15 @@
 {{#if isAuthenticated}}
-<a href="#" {{action "edit"}}>Edit</a>
-<a href="#" {{action "delete" blog}}>Delete</a>
+<div class="s2 right-align">
+  <a href="#">
+    {{tooltip-on-element class="tool-tipped-dialogue" side="top" text="Edit this post"}}
+    <i class="edit-icon material-icons" {{action "edit" blog}}>edit_mode</i>
+  </a>
+  <a href="#">
+    {{tooltip-on-element class="tool-tipped-dialogue" side="top" text="Delete this post"}}
+    <i class="delete-icon material-icons" {{action "delete" blog}}>delete</i>
+  </a>
+</div>
+
 {{else}}
 <a href="#" {{action "like"}}>Like</a>
 {{/if}}
