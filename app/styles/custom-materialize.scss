@@ -7,11 +7,18 @@
 .btn {
   background-color: $button-color;
 }
-
+.main-content-container{
+  width: 85%;
+  margin: 0 auto;
+}
 .card-panel {
   border-color: $primary-color;
   border-width: 2px;
   border-style: solid;
+}
+.blog-intro-card{
+  margin-top: 25px !important;
+  background-color: $primary-color;
 }
 
 
@@ -61,10 +68,23 @@ body {
   background-color: grey;
 }
 .divider {
-  background-color: $primary-color-light;
+  background-color: $primary-color;
 }
-.delete-icon {
-  color: red;
+.delete-button{
+  background-color: $button-cancel-color;
+  color: $button-cancel-raised-background-hover;
+  &:hover{
+    background-color: $button-cancel-raised-background-hover;
+    color: white;
+  }
+}
+.delete-button-small{
+  background-color: none;
+  color: $button-cancel-raised-background-hover;
+  cursor: pointer;
+}
+.new-contact-wppr{
+  margin-top: 50px;
 }
 .edit-icon{
   color: green;

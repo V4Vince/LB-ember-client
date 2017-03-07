@@ -1,13 +1,14 @@
 {{#if isAuthenticated}}
-<div class="s2 right-align">
-  <a href="#">
+<div class="s10 m6 right-align">
+  <button class="btn waves-effect" {{action "edit" blog}} type="submit" name="action">Edit
+    <i class="edit-blog-icon material-icons right">edit_mode</i>
     {{tooltip-on-element class="tool-tipped-dialogue" side="top" text="Edit this post"}}
-    <i class="edit-icon material-icons" {{action "edit" blog}}>edit_mode</i>
-  </a>
-  <a href="#">
+  </button>
+
+  <button class="s2 m2 btn waves-effect delete-blog-button delete-button" {{action "delete" blog}} type="submit" name="action">
+    <i class="delete-icon material-icons">delete</i>
     {{tooltip-on-element class="tool-tipped-dialogue" side="top" text="Delete this post"}}
-    <i class="delete-icon material-icons" {{action "delete" blog}}>delete</i>
-  </a>
+  </button>
 </div>
 
 {{else}}

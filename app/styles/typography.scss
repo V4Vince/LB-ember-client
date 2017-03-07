@@ -38,7 +38,7 @@ p.blog-content{
 .profile-caption {
   color: white;
   font-weight: 400 !important;
-  font-family: 'Pacifico';
+  font-family: 'Roboto';
   &.card-title{
     margin-left: -15px;
     margin-bottom: -45px;
@@ -46,6 +46,7 @@ p.blog-content{
 }
 .about-lynn-name {
   font-size: 75px;
+  font-family: 'Pacifico';
 }
 #site-map {
   text-align: center;
@@ -73,4 +74,22 @@ p.blog-content{
 }
 .contact-path{
   font-size: 16px;
+}
+.my-prefix-blog-intro{
+  font-size: 45px;
+  color: white;
+  //make the "my" small
+}
+.blog-intro-title{
+  font-family: 'Pacifico';
+  color: white;
+  font-size: 75px;
+}
+.contact-intro-header{
+  font-family: 'Pacifico';
+  color: white;
+  font-size: 75px;
+}
+.contact-intro-suffix{
+  font-size: 45px;
 }

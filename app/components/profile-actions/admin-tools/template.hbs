@@ -1,11 +1,10 @@
 {{#if isAuthenticated}}
-{{!-- <div class="container">
-  <a {{action 'showAboutModal'}}>Edit</a>
-</div> --}}
-<div class="edit-about-me-btn-wrppr container">
-  <a class="edit-about-me-btn waves-effect waves-light btn" {{action "showAboutModal"}}><i class="material-icons right">mode_edit</i>Edit</a>
+<div class="right-align">
+  <button class="btn waves-effect" {{action "showAboutModal"}} type="submit" name="action">Edit
+    <i class="edit-profile-icon material-icons right">edit_mode</i>
+    {{tooltip-on-element class="tool-tipped-dialogue" side="top" text="Edit your about-me"}}
+  </button>
 </div>
-
 {{/if}}
 
 {{#if aboutModalIsOpen}}

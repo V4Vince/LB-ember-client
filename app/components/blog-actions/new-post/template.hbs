@@ -1,12 +1,21 @@
 {{#if isAuthenticated}}
-<div class="blog-form-button-wpr container">
+{{!-- <div class="blog-form-button-wpr container">
   <div class="row">
     {{md-btn class="col s12"
       text="New Post"
       action="showBlogPostForm"}}
   </div>
-</div>
+</div> --}}
+<div class="fixed-action-btn new-blog-post">
+    <a class="btn-floating btn-large new-post-btn" {{action "showBlogPostForm"}}>
+      <i class="material-icons">add</i>
+    </a>
+  </div>
 {{/if}}
+
+
+
+
 
 {{#if isNewBlogFormOpen}}
 {{#md-modal close='closeModal' isFooterFixed=true class="new-blog-modal"}}

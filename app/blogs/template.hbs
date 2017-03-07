@@ -1,7 +1,11 @@
-<h4 class="flow-text center-align">Blog</h4>
-<p class="profile-intro">
+{{#md-card-panel id="blog-intro-header" class="blog-intro-card"}}
+{{!-- <h2 class="my-prefix-blog-intro center-align">My</h2> --}}
+<h2 class="flow-text center-align blog-intro-title"><span class="my-prefix-blog-intro">My</span>Blog</h2>
+{{!-- <p class="profile-intro">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
+</p> --}}
+{{/md-card-panel}}
+
 {{blog-actions/new-post
     postBlog="postBlog" }}
 

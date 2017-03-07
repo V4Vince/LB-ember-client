@@ -38,19 +38,17 @@ a.contact-icons{
     height: 50px;
   }
 }
-
-
-// Small screens
-@media screen and (max-width: 450px) {
-
-  img.profile-image {
-    height: 200px;
+.fixed-action-btn{
+  &.new-blog-post{
+    bottom: 50px;
   }
-
+  &.btn-floating{
+    background-color: $primary-color;
+  }
 }
 
 // Small screens
-@media screen and (min-width: 450px) {
+@media screen and (max-width: 650px) {
 
   img.profile-image {
     height: 250px;
@@ -63,5 +61,6 @@ a.contact-icons{
   img.profile-image {
     height: 300px;
   }
+
 
 }

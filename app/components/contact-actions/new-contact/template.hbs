@@ -1,15 +1,14 @@
 {{#if isAuthenticated}}
-<div class="contact-form-button-wpr container">
-  <div class="row">
-    {{md-btn class="col s12"
-      text="Add Contact"
-      action="showContactPostForm"}}
-  </div>
+<div class="new-contact-wppr row center-align">
+    <button class="new-contact-button btn-floating btn-large" {{action "showContactPostForm"}} type="submit" name="Add a new contact">
+      <i class="new-contact-icon material-icons">add</i>
+      {{tooltip-on-element class="tool-tipped-dialogue" side="top" text="Add new contact info"}}
+    </button>
 </div>
 {{/if}}
 
 {{#if isContactPostForm}}
-{{#md-modal close='closeModal'  class="new-contact-modal"}}
+{{#md-modal id="add-new-contact-modal" close='closeModal'  class="new-contact-modal"}}
     <div class="modal-content">
       <div class="container">
         <p class="card-title">Add a new way to contact you</p>
