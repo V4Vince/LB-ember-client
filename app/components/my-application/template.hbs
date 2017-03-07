@@ -12,6 +12,11 @@
       {{#link-to 'contacts' tagName='li'}}
         {{link-to 'Contact' 'contacts'}}
       {{/link-to}}
+      {{#if isAuthenticated}}
+      {{#link-to "settings-page"}}
+        <i class="material-icons">settings</i>
+      {{/link-to}}
+      {{/if}}
   {{/md-navbar}}
 </nav>
 

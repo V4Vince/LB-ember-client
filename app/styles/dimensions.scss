@@ -1,5 +1,6 @@
 $margin-bottom: 3rem;
 
+
 #main-nav-bar {
   margin-bottom: $margin-bottom;
 }
@@ -32,6 +33,11 @@ footer.page-footer {
     text-align: center;
   }
 }
+#contact-card-view{
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 25px;
+}
 a.contact-icons{
   margin-right: 25px;
   .contact-facebook{
@@ -47,11 +53,18 @@ a.contact-icons{
   }
 }
 
+.contact-row{
+  margin-bottom: 10px;
+}
+
 // Small screens
 @media screen and (max-width: 650px) {
 
   img.profile-image {
     height: 250px;
+  }
+  .main-content-container{
+    width: 95%;
   }
 
 }

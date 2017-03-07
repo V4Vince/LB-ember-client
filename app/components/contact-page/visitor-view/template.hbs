@@ -1,13 +1,15 @@
-<div class="row">
-  <div class="container">
-    <div class="col s4 valign-wrapper">
-      <span class="grey-text left-align valign">{{contact.contactType}}</span>
+<div class="contact-row row">
+  <div class="container content-text valign-wrapper">
+    <div class="col s4">
+      <p class="grey-text right-align valign">{{contact.contactType}}</p>
     </div>
     <div class="col s6">
-      <span class="contact-path right-align valign">{{contact.contactPath}}</span>
+      <p class="flow-text contact-path left-align valign">{{contact.contactPath}}</p>
     </div>
-    {{#if isAuthenticated}}
-      {{contact-page/admin-tools/delete-button contact=contact}}
-    {{/if}}
+    <div class=" valign right-align">
+      {{#if isAuthenticated}}
+        {{contact-page/admin-tools/delete-button contact=contact}}
+      {{/if}}
+    </div>
   </div>
 </div>
