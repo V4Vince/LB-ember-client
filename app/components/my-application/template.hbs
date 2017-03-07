@@ -1,25 +1,28 @@
 <!-- Navigation Bar-->
-{{#md-navbar name='Lynnelle Bennett' id="main-navbar"}}
-  <!-- A workaround to get the "active" class
-    to apply to the active <li> automatically -->
-    {{#link-to 'blogs' tagName='li'}}
-      {{link-to 'Blog' 'blogs'}}
-    {{/link-to}}
-    {{#link-to 'profile' tagName='li'}}
-      {{link-to 'About' 'profile'}}
-    {{/link-to}}
-    {{#link-to 'contacts' tagName='li'}}
-      {{link-to 'Contact' 'contacts'}}
-    {{/link-to}}
-{{/md-navbar}}
+<nav class="site-navbar">
+  {{#md-navbar name='Lynnelle Bennett' id="main-navbar"}}
+    <!-- A workaround to get the "active" class
+      to apply to the active <li> automatically -->
+      {{#link-to 'blogs' tagName='li'}}
+        {{link-to 'Blog' 'blogs'}}
+      {{/link-to}}
+      {{#link-to 'profile' tagName='li'}}
+        {{link-to 'About' 'profile'}}
+      {{/link-to}}
+      {{#link-to 'contacts' tagName='li'}}
+        {{link-to 'Contact' 'contacts'}}
+      {{/link-to}}
+  {{/md-navbar}}
+</nav>
+
 
 <!-- All of site contents -->
-<div class="container">
+<main class="container">
   {{outlet}}
-  {{#if isAuthenticated}}
+  {{!-- {{#if isAuthenticated}}
     {{admin-navigation}}
-  {{/if}}
-</div>
+  {{/if}} --}}
+</main>
 
 <!-- Site Footer-->
 <footer class='page-footer white-text'>
@@ -51,8 +54,8 @@
                 </ul>
             </div>
           </div>
+          <!--Site Map Links-->
           <div class="row">
-            <!--Site Map Links-->
             <div class="col s12">
                 <ul id="site-map">
                   <li>AudioBooks</li>
@@ -64,9 +67,9 @@
                   <li>{{#link-to "contacts" class="footer-links"}}Contact{{/link-to}}</li>
                 </ul>
             </div>
-
-        </div>
-    </div>
+          </div>
+    </div><!--/container-->
+    <!--copyright-->
     {{#md-copyright text='Lynelle Bennett'
         startYear=2017
         class='white-text'}}
