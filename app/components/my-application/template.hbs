@@ -13,9 +13,14 @@
         {{link-to 'Contact' 'contacts'}}
       {{/link-to}}
       {{#if isAuthenticated}}
-      {{#link-to "settings-page"}}
-        <i class="material-icons">settings</i>
+      {{#link-to "settings-page"}}<span class="hide-on-large-only">Settings</span>
+        <i class="hide-on-med-and-down material-icons">settings</i>
       {{/link-to}}
+      <div class="row">
+        <div class="container">
+          <button class="col s12 btn btn-large hide-on-large-only log-out-button" type="button" name="sign out button" {{action "logOut"}}>Logout</button>
+        </div>
+      </div>
       {{/if}}
   {{/md-navbar}}
 </nav>

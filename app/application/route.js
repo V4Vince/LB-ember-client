@@ -5,6 +5,17 @@ export default Ember.Route.extend({
   flashMessages: Ember.inject.service(),
 
   actions: {
+    signOut () {
+      this.get('auth').signOut()
+      .then(() => this.transitionTo('application'))
+      .then(() => {
+        Materialize.toast("You have been signed out", 3000);
+      })
+      .catch(() => {
+        Materialize.toast("There was a problem. Make sure you are already signed in.", 3000, 'red');
+      });
+      this.store.unloadAll();
+    },
     error (reason) {
       let unauthorized = reason.errors.some((error) =>
         error.status === '401'

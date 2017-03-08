@@ -56,7 +56,16 @@ a.contact-icons{
 .contact-row{
   margin-bottom: 10px;
 }
+.log-out-button{
+  background-color: $button-cancel-raised-background-hover;
+  margin-top: 50px;
+  &:hover,
+  &:visited,
+  &:active{
+    background-color: $button-cancel-raised-background-hover;
+  }
 
+}
 // Small screens
 @media screen and (max-width: 650px) {
 
