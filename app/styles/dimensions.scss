@@ -75,10 +75,13 @@ a.contact-icons{
   .main-content-container{
     width: 95%;
   }
+  #contact-card-view{
+    width: 95%;
+  }
 
 }
 // large screens
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 651px) {
 
   img.profile-image {
     height: 300px;
