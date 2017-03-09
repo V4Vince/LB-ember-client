@@ -13,11 +13,12 @@
         </div>
       </div>
     </div>
-    <div class="modal-footer">
-      <!--Wire up update/edit function here-->
-        <!-- Update Button-->
-        <a class="modal-action btn-flat agree-button" {{action 'update' profile}}>Update!</a>
-        <!-- Cancel Button-->
-        <a class="modal-action btn-flat cancel-button" {{action 'closeModal'}}>Cancel</a>
+    <div class="row">
+      <div class="modal-footer">
+        <!--Wire up update/edit function here-->
+          <a class="edit-modal-button btn-flat col s12 center-align" {{action 'update' profile}}>
+              <i class="submit-icon material-icons">done</i>
+          </a>
+      </div>
     </div>
 {{/md-modal}}
