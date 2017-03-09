@@ -1,22 +1,23 @@
 <!-- 1.Make modal area larger
      2.Make input field larger  -->
 
-{{#md-modal close='closeModal' isFooterFixed=true class=""}}
+{{#md-modal close='closeModal' isFooterFixed=true class="about-me-modal"}}
     <div class="modal-content">
-      <p class="title" id="edit-about-me-modal">Edit your about me section</p>
+      <h4 class="card-title">Edit your about me section</h4>
       <!--Input field-->
       <div class="row">
-        {{md-textarea label='About Me'
-          value=profile.aboutMe
-          class="col s12"}}
+        <div class="input-field">
+          {{md-textarea label='About Me'
+            value=profile.aboutMe
+            class="col s12 about-me-textarea"}}
+        </div>
       </div>
     </div>
-
     <div class="modal-footer">
       <!--Wire up update/edit function here-->
         <!-- Update Button-->
-        <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'update' profile}}>Update!</a>
+        <a class="modal-action btn-flat agree-button" {{action 'update' profile}}>Update!</a>
         <!-- Cancel Button-->
-        <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>Cancel</a>
+        <a class="modal-action btn-flat cancel-button" {{action 'closeModal'}}>Cancel</a>
     </div>
 {{/md-modal}}

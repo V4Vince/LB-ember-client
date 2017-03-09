@@ -96,3 +96,10 @@ body {
   margin-top: 25px;
   margin-bottom: 25px;
 }
+//removes shadow from date-picker when opened
+.picker--opened .picker__holder{
+  background: none;
+}
+textarea.about-me-textarea{
+  height: 550px !important;
+}

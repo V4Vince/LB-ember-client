@@ -12,8 +12,9 @@ export default Ember.Component.extend({
       showAboutModal () {
         this.set('aboutModalIsOpen', true);
       },
+
       editAboutMe (profile){
         this.sendAction('editAboutMe', profile);
       },
-    }
+    },
 });
