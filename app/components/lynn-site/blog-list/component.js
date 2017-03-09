@@ -13,5 +13,14 @@ export default Ember.Component.extend({
     editBlog(blog){
       this.sendAction('editBlog', blog);
     },
-  }
+  },
+  //Attempted to use jQuery to animate list
+  // didInsertElement: function() {
+  //   this._super();
+  //   Ember.run.scheduleOnce('afterRender', this, function() {
+  //     Materialize.showStaggeredList('#blog-collection');
+  //     console.log("YASSS");
+  //   });
+  // },
+
 });

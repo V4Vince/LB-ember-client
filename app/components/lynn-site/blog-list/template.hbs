@@ -1,17 +1,19 @@
 {{#each sortedBlog as |blog|}}
+<ul class="" id="blog-collection">
+  {{#md-card title=blog.title titleClass="blog-title" class="blog-card"}}
+  <span class="badge" data-badge-caption="custom caption">{{moment-format blog.createdAt 'MM/DD/YYYY'}}</span>
+      {{#md-card-content class="container"}}
+          <p class="blog-content left-align">{{blog.content}}</p>
+      {{/md-card-content}}
 
-{{#md-card title=blog.title titleClass="blog-title" class="blog-card"}}
-<span class="badge" data-badge-caption="custom caption">{{moment-format blog.createdAt 'MM/DD/YYYY'}}</span>
-    {{#md-card-content class="container"}}
-        <p class="blog-content left-align">{{blog.content}}</p>
-    {{/md-card-content}}
+      {{#md-card-action class="blog-card-action"}}
+        {{blog-actions/admin-tools
+          editBlog=editBlog
+          deleteBlog=deleteBlog
+          blog=blog}}
+      {{/md-card-action}}
+  {{/md-card}}
+</ul>
 
-    {{#md-card-action class="blog-card-action"}}
-      {{blog-actions/admin-tools
-        editBlog=editBlog
-        deleteBlog=deleteBlog
-        blog=blog}}
-    {{/md-card-action}}
-{{/md-card}}
 
 {{/each}}

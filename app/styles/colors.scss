@@ -13,7 +13,7 @@ $primary-color-dark: darken($primary-color, 5%);
 $secondary-color: color("teal", "darken-1");
 
 //$button-color
-$button-color: $primary-color;
+$button-color: lighten($primary-color, 5%);
 $button-raised-background-hover: lighten($button-color, 5%) !default;
 $button-cancel-color: color("grey", "lighten-1") !default;
 $button-cancel-raised-background-hover: color("red", "darken-3") !default;
