@@ -11,7 +11,7 @@
 {{#md-modal id="add-new-contact-modal" close='closeModal'  class="new-contact-modal"}}
     <div class="modal-content">
       <div class="container">
-        <p class="card-title">Add a new way to contact you</p>
+        <h4 class="card-title center-align">Add a new way to contact you</h4>
         <!--Contact type Select-->
         <div class="row">
           {{md-select content=contactTypes
@@ -24,12 +24,15 @@
         <div class="row">
           {{md-input value=contactData.contactPath label='Contact Path' class="col s12" validate=true}}
         </div>
-        <!--Submit button-->
-        <div class="row">
-          {{md-btn class="col s12 submit-button"
+
+        <div class="row new-contact-row">
+          <a class="new-contact-button btn-flat col s12 center-align" {{action 'post'}}>
+            <i class="submit-icon material-icons">backup</i>
+          </a>
+          {{!-- {{md-btn class="col s12 submit-button"
             buttonType="flat"
             text="Save"
-            action="post"}}
+            action="post"}} --}}
         </div>
       </div>
     </div>

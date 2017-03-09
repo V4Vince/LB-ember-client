@@ -79,6 +79,19 @@ i.submit-icon{
   font-size: 2em;
 }
 
+#add-new-contact-modal{
+  height: 300px !important;
+}
+.new-contact-row{
+  margin: 0;
+  bottom: 0;
+}
+a.new-contact-button{
+  margin-top: 60px;
+  background-color: $primary-color;
+  bottom: 0;
+  color: white;
+}
 
 // Small screens
 @media screen and (max-width: 650px) {
