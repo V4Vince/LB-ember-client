@@ -1,11 +1,4 @@
 {{#if isAuthenticated}}
-{{!-- <div class="blog-form-button-wpr container">
-  <div class="row">
-    {{md-btn class="col s12"
-      text="New Post"
-      action="showBlogPostForm"}}
-  </div>
-</div> --}}
 <div class="fixed-action-btn new-blog-post">
     <a class="btn-floating btn-large new-post-btn" {{action "showBlogPostForm"}}>
       <i class="material-icons">add</i>
@@ -14,17 +7,12 @@
 {{/if}}
 
 
-
-
-
 {{#if isNewBlogFormOpen}}
 {{#md-modal close='closeModal' isFooterFixed=true class="new-blog-modal"}}
     <div class="modal-content">
-      <p class="title">Add new blog post</p>
+      <h4 class="card-title center-align">New Blog Post</h4>
       <div class="row">
-        <div class="row">
-          {{md-input value=blogData.title label='Title' class="col s12 form-group" errors=errors.title}}
-        </div>
+      {{md-input value=blogData.title label='Title' class="col s12 form-group" errors=errors.title}}
       </div>
       <div class="row">
         {{md-textarea label='Blog post'
@@ -33,11 +21,13 @@
       </div>
     </div>
 
-    <div class="modal-footer row">
-      <!--Wire up update/edit function here-->
-        <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button col s12 center-align" {{action 'post'}}>
-            Post!
-        </a>
+    <div class="row">
+      <div class="modal-footer">
+        <!--Wire up update/edit function here-->
+          <a class="edit-modal-button btn-flat col s12 center-align" {{action 'post'}}>
+              <i class="submit-icon material-icons">backup</i>
+          </a>
+      </div>
     </div>
 {{/md-modal}}
 {{/if}}
