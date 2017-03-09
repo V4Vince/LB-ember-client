@@ -90,7 +90,7 @@ body {
   color: green;
 }
 .tool-tipped-dialogue{
-  z-index: 2; //prevents dialogue from being hidden behind action-container in action cards
+  z-index: 999; //prevents dialogue from being hidden behind action-container in action cards
 }
 .no-contact-info-display{
   margin-top: 25px;

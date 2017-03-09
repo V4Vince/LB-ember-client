@@ -107,7 +107,7 @@ p.blog-content{
       background-color: transparent;
     }
 }
-span.settings-link, i {
+span.settings-link{
   text-transform: uppercase;
   font-weight: 400;
   &:hover,
@@ -144,6 +144,7 @@ span.settings-link, i {
     }
 }
 #gear-icon:hover{
+  font-size: 2.3em;
   -webkit-animation-name: spinnerRotate;
     -webkit-animation-duration: 5s;
     -webkit-animation-iteration-count: infinite;

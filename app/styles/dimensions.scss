@@ -65,7 +65,19 @@ a.contact-icons{
     background-color: $button-cancel-raised-background-hover;
   }
 }
-
+.modal-footer{
+  margin: 0;
+  padding: 0;
+  background-color: $primary-color !important;
+}
+a.edit-modal-button{
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+i.submit-icon{
+  font-size: 2em;
+}
 
 
 // Small screens
