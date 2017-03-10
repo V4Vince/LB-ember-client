@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   //blog <- from lynn-site/blog-list
   //editBlog <- from lynn-site/blog-list
   //deleteBlog <- from lynn-site/blog-list
-
+  showConfirmation: false,
   isEditBlogFormOpen: false,
 
   actions: {
@@ -16,8 +16,12 @@ export default Ember.Component.extend({
     editBlog(blog){
       this.sendAction('editBlog', blog);
     },
-    delete(blog){
+    deleteBlog(blog){
       this.sendAction('deleteBlog', blog);
+    },
+    delete(){
+      this.set('showConfirmation', true);
+      // this.sendAction('deleteBlog', blog);
     },
     like(){
       //maybe use a facebook like action

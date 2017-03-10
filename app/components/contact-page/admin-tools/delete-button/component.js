@@ -5,6 +5,9 @@ export default Ember.Component.extend({
   //contact <-- action from contact-page/visior-view
 
   actions: {
+    deleteConfirm(){
+      this.set('showConfirmation', true);
+    },
     delete () {
       let id = this.get('contact.id');
       //peekRecord won't make a server GET call
