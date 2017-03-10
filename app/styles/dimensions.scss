@@ -1,6 +1,8 @@
 $margin-bottom: 3rem;
 
-
+a .active{
+  text-decoration: underline;
+}
 #main-nav-bar {
   margin-bottom: $margin-bottom;
 }
@@ -17,6 +19,7 @@ $margin-bottom: 3rem;
 
 footer.page-footer {
   margin-top: 20%;
+  background-color: $footer;
 }
 
 .solid-color-card{

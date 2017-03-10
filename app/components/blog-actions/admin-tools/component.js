@@ -16,12 +16,13 @@ export default Ember.Component.extend({
     editBlog(blog){
       this.sendAction('editBlog', blog);
     },
+    //Passes the delete confirmation from the confirmation modal
     deleteBlog(blog){
       this.sendAction('deleteBlog', blog);
     },
+    //Show delete confirmation
     delete(){
       this.set('showConfirmation', true);
-      // this.sendAction('deleteBlog', blog);
     },
     like(){
       //maybe use a facebook like action

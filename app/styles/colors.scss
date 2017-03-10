@@ -1,16 +1,21 @@
 
 // THESE ARE CUSTOM COLORS DEPENDENT ON components/colors
 
-// $background-color:
-$background-color: color("teal", "lighten-5");
+$background-color: #EEEEEE;
 
-// $primary-color:
-$primary-color: color("cyan", "darken-3");
+// $background-color: color("teal", "lighten-5");
+
+$primary-color: #1565C0;
+// $primary-color: color("cyan", "darken-3");
 $primary-color-light: lighten($primary-color, 5%);
-$primary-color-dark: darken($primary-color, 5%);
+$primary-color-dark: darken($primary-color, 15%);
 
+$secondary-color: $primary-color-dark;
 //$secondary-color: color("brown", "lighten-5"); //#bcaaa4
-$secondary-color: color("teal", "darken-1");
+// $secondary-color: color("teal", "darken-1");
+
+//Footer-color
+$footer: darken($primary-color, 30%);
 
 //$button-color
 $button-color: lighten($primary-color, 5%);

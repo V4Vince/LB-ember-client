@@ -1,23 +1,31 @@
 {{#if isAuthenticated}}
 <div class="s10 m6 right-align">
-  <button class="btn waves-effect" {{action "edit" blog}} type="submit" name="action">Edit
+  <!--Edit blog button-->
+  <button class="btn" {{action "edit" blog}} type="submit" name="action">Edit
     <i class="edit-blog-icon material-icons right">edit_mode</i>
-    {{tooltip-on-element class="tool-tipped-dialogue" side="top" text="Edit this post"}}
+    {{tooltip-on-element delayOnChange=true delay=1000
+      class="tool-tipped-dialogue"
+      side="top"
+      text="Edit this post"}}
   </button>
-
-  <button class="s2 m2 btn waves-effect delete-blog-button delete-button" {{action "delete"}} type="submit" name="action">
+  <!--Delete blog button-->
+  <button class="s2 m2 btn delete-blog-button delete-button" {{action "delete"}} type="submit" name="action">
     <i class="delete-icon material-icons">delete_forever</i>
-    {{tooltip-on-element class="tool-tipped-dialogue" side="top" text="Delete this post"}}
+    {{tooltip-on-element delayOnChange=true delay=1000
+      class="tool-tipped-dialogue"
+      side="top"
+      text="Delete this post"}}
   </button>
+  <!--confirmation dialogue modal-->
+  {{confirm-delete object=blog deleteBlog=deleteBlog showConfirmation=showConfirmation
+  modelToBeDeleted="blog post"}}
 </div>
-<!--confirmation dialogue-->
-{{confirm-delete object=blog deleteBlog=deleteBlog showConfirmation=showConfirmation
-modelToBeDeleted="blog post"}}
-
 {{else}}
+<!--Replace with Facebook like button-->
 <a href="#" {{action "like"}}>Like</a>
 {{/if}}
 
+<!--If authenticated show admin-tools-->
 {{#if isEditBlogFormOpen}}
 {{blog-actions/edit-blog
     isEditBlogFormOpen=isEditBlogFormOpen
