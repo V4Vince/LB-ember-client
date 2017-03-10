@@ -1,8 +1,5 @@
 $margin-bottom: 3rem;
 
-a .active{
-  text-decoration: underline;
-}
 #main-nav-bar {
   margin-bottom: $margin-bottom;
 }
@@ -66,6 +63,7 @@ a.contact-icons{
 }
 .modal{
   width: 50%;
+  height: auto;
 }
 .modal-footer{
   margin: 0;
@@ -82,7 +80,7 @@ i.submit-icon{
 }
 
 #add-new-contact-modal{
-  height: 300px !important;
+  // height: 300px !important;
 }
 .new-contact-row{
   margin: 0;
