@@ -10,5 +10,5 @@ export default Ember.Component.extend({
     cancelDelete(){
       this.set('showConfirmation', false);
     }
-  }
+  },
 });
