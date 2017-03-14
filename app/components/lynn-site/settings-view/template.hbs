@@ -25,7 +25,7 @@
   {{/each}}
 
 
-  {{#md-card id="contact-info-card"}}
+  {{!-- {{#md-card id="contact-info-card"}}
     {{#each contacts as |contact|}}
       {{#md-card-action}}
         {{contact.contactType}}:
@@ -35,7 +35,7 @@
       {{#md-card-action}}
         <a href="#">Edit contact info</a>
       {{/md-card-action}}
-  {{/md-card}}
+  {{/md-card}} --}}
 </div>
 
 
@@ -48,22 +48,30 @@
     {{/md-card-action}}
 
     {{#md-card-action}}
-      <a href="#">Edit about me</a>
+    {{#link-to 'profile'}}
+      {{link-to 'Edit About Me' 'profile'}}
+    {{/link-to}}
     {{/md-card-action}}
 
     {{#md-card-action}}
-      <a href="#">Edit Blog intro</a>
+    {{#link-to 'blogs'}}
+      {{link-to 'Edit Blog Posts' 'blogs'}}
+    {{/link-to}}
     {{/md-card-action}}
 
     {{#md-card-action}}
-      <a href="#">Edit contact intro</a>
-    {{/md-card-action}}
-
-    {{#md-card-action}}
-      <a href="#" {{action "logOut"}}>Sign out</a>
+    {{#link-to 'contacts'}}
+      {{link-to 'Edit Contacts' 'contacts'}}
+    {{/link-to}}
     {{/md-card-action}}
 
   {{/md-card}}
+</div>
+
+<div class="row">
+  <div class="col s12">
+    {{md-btn class="delete-button col s12 btn btn-large" action="logOut" text="Sign Out"}}
+  </div>
 </div>
 
 <!--Change PW modal-->
