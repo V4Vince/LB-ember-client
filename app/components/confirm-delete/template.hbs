@@ -1,41 +1,25 @@
 {{#if showConfirmation}}
-{{!-- <div class="container">
-
-
-<div id="confirm-delete-dialogue" class="row center-align">
-  {{#md-card-panel class="col s6 offset-s3"}}
-  <div class="row">
-    <h4>Delete {{modelToBeDeleted}}</h4>
-    <p class="card-title flow-text">Are you sure you want to delete this {{modelToBeDeleted}}?</p>
-  </div>
-  <div class="row">
-    <button class="btn col s6" type="button" name="cancel delete" {{action "cancelDelete"}}>
-      Cancel
-    </button>
-    <button class="btn col s6" type="button" name="confirm delete" {{action "confirmDelete" object}}>
-      <i class="material-icons">delete_forever</i>
-    </button>
-  </div>
-  {{/md-card-panel}}
-</div> --}}
-
-    {{#md-modal fixedFooter=false class="confirm-delete-dialogue"}}
+    {{#md-modal isFixedFooter=true class="confirm-delete-dialogue"}}
         <div class="modal-content">
-          <div class="container">
-            <div class="row">
-              <h4>Delete {{modelToBeDeleted}}</h4>
-              <p class="card-title flow-text">Are you sure you want to delete this {{modelToBeDeleted}}?</p>
-            </div>
-            <div class="row">
-              <button class="btn col s6" type="button" name="cancel delete" {{action "cancelDelete"}}>
-                Cancel
-              </button>
-              <button class="btn col s6" type="button" name="confirm delete" {{action "confirmDelete" object}}>
-                <i class="material-icons">delete_forever</i>
-              </button>
+          <p class="card-title flow-text center-align">Are you sure you want to delete this {{modelToBeDeleted}}?</p>
+          <div class="row">
+            <div class="container">
+              <h6>{{contentTitle}}</h6>
+              <blockquote class="content-preview-confirm">{{contentPreview}}</blockquote>
             </div>
           </div>
         </div>
+        <div class="modal-footer delete-dialogue">
+          <div class="row">
+
+              <button class="delete-button-confirm btn col s6" type="button" name="confirm delete" {{action "confirmDelete" object}}>
+                <i class="material-icons">delete_forever</i>
+              </button>
+              <button class="cancel-button btn col s4" type="button" name="cancel delete" {{action "cancelDelete"}}>
+                Cancel
+              </button>
+
+          </div>
+        </div>
     {{/md-modal}}
-    {{!-- </div> --}}
 {{/if}}

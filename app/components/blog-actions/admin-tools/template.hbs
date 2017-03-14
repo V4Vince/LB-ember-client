@@ -17,8 +17,11 @@
       text="Delete this post"}}
   </button>
   <!--confirmation dialogue modal-->
-  {{confirm-delete object=blog deleteBlog=deleteBlog showConfirmation=showConfirmation
-  modelToBeDeleted="blog post"}}
+  {{confirm-delete contentPreview=blog.content
+    contentTitle=blog.title
+    deleteBlog=deleteBlog
+    showConfirmation=showConfirmation
+    modelToBeDeleted="blog post"}}
 </div>
 {{else}}
 <!--Replace with Facebook like button-->

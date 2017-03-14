@@ -83,6 +83,16 @@ body {
   color: $button-cancel-raised-background-hover;
   cursor: pointer;
 }
+.delete-button-confirm{
+  margin-left: 15px;
+  background-color: $button-cancel-raised-background-hover;
+  &:hover{
+    background-color: lighten($button-cancel-raised-background-hover, 5%);
+  }
+}
+.cancel-button:hover{
+  background-color: $button-cancel-color;
+}
 .new-contact-wppr{
   margin-top: 50px;
 }
