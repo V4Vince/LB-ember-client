@@ -4,7 +4,7 @@ export default Ember.Component.extend({
 
   actions: {
     confirmDelete(object){
-      this.sendAction('deleteAction', object);
+      this.sendAction('deleteBlog', object);
       this.set('showConfirmation', false);
     },
     cancelDelete(){
