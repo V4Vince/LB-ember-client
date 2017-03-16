@@ -12,7 +12,7 @@ export default Ember.Component.extend({
       let id = this.get('contact.id');
       //peekRecord won't make a server GET call
       let contact = this.get('store').peekRecord('contact', id);
-      return contact.desgit satttroyRecord()
+      return contact.destroyRecord()
       .then(() => {
         Materialize.toast("Successfully saved new blog post!", 3000);
       })
