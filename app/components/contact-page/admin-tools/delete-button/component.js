@@ -14,7 +14,7 @@ export default Ember.Component.extend({
       let contact = this.get('store').peekRecord('contact', id);
       return contact.destroyRecord()
       .then(() => {
-        Materialize.toast("Successfully saved new blog post!", 3000);
+        Materialize.toast("Successfully deleted this contact!", 3000);
       })
       .catch(() => {
         Materialize.toast("Unable to delete this contact", 3000);
