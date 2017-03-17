@@ -1,0 +1,16 @@
+
+
+
+{{#each model as |video|}}
+{{#md-card-panel}}
+    <p class=card-title>{{video.title}}</p>
+    <div class="video-container">
+      <iframe width="853" height="480" src={{video.correctLink}} frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p>This is the video description: {{video.description}}</p>
+{{/md-card-panel}}
+{{/each}}
+
+{{#if isAuthenticated}}
+  {{video-admin post="post" showForm=showForm}}
+{{/if}}

@@ -7,7 +7,7 @@ actions: {
   scrollUp(){
     Ember.$('html, body').animate({
       scrollTop: $("#main-navbar").offset().top
-    }, 1000);
+    }, 200);
   },
 },
 

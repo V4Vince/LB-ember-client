@@ -2,6 +2,9 @@
 <nav class="site-navbar">
   {{#md-navbar name='Lynnelle Bennett' id="main-navbar"}}
       <div class="nav-links-wrapper">
+        {{#link-to 'videos' tagName='li'}}
+          {{link-to 'Home' 'videos'}}
+        {{/link-to}}
         {{#link-to 'blogs' tagName='li'}}
           {{link-to 'Blog' 'blogs'}}
         {{/link-to}}
