@@ -15,3 +15,5 @@ export default Ember.Component.extend({
     },
   }
 });
+
+//testing a commit message
