@@ -6,7 +6,6 @@ export default DS.Model.extend({
   videoLink: DS.attr('string'),
   description: DS.attr('string'),
 
-
   //this formats the link to include embed instead of watch
   correctLink: Ember.computed('videoLink', function() {
     let link = this.get('videoLink').replace("watch?v=", "embed/");
