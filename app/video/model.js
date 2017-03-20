@@ -3,8 +3,9 @@ import Ember from 'ember';
 
 export default DS.Model.extend({
   title: DS.attr('string'),
-  product price: DS.attr('string'),
-  product pic: DS.attr('string'),
+  videoLink: DS.attr('string'),
+  description: DS.attr('string'),
+
 
   //this formats the link to include embed instead of watch
   correctLink: Ember.computed('videoLink', function() {
@@ -12,5 +13,3 @@ export default DS.Model.extend({
     return link;
   })
 });
-
-//testing

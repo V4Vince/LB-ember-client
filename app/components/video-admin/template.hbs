@@ -1,0 +1,8 @@
+{{md-btn class="btn" action="postForm" text="New"}}
+
+{{#if showForm}}
+{{md-input value=data.title label='Title' class="col s6"}}
+{{md-input value=data.videoLink label='Link' class="col s6"}}
+{{md-input value=data.description label='Description' class="col s6"}}
+{{md-btn class="btn" action="post" text="save"}}
+{{/if}}
